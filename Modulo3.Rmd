@@ -1,0 +1,59 @@
+---
+title: <span style="color:#2C5697"> </span>
+subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
+author: "dgonzalez "
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    theme: flatly
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+# colores
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
+```
+
+![](img/banner003.png) 
+
+<br/><br/>
+
+ <div class="highlight-box">
+ 
+# **Introducción**
+
+El concepto de variable  aleatoria  y sus principales características como el  valor esperado, la varianza, funciones de  distribución de  probabilidad y distribución  acumulada, distribuciones conjuntas, covarianza y correlación, permiten la identificación de diferentes modelos para su  uso a través de la simulación de situaciones reales. 
+
+</div>
+
+<br/><br/>
+
+<div class="highlight-box">
+
+# **Objetivo**
+
+Al finalizar el módulo el estudiante estará en capacidad de APLICAR los conceptos y las principales características  de las VARIABLE ALEATORIA UNIVARIADAS y CONJUNTAS para RESOLVER problemas mediante la simulación a través de software estadístico.
+
+
+</div>
+
+<br/><br/><br/>
+
+
+<!-- # **Mapa** -->
+
+<!-- ![](img/mapU3.png) -->

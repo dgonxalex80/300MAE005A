@@ -1,0 +1,102 @@
+---
+title: "**Sobre el grupo**"
+subtitle: " "
+author: "dgonzalez"
+date: ""
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    theme: flatly
+    css: style.css
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
+
+# colores
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
+# Crear el data.frame
+# Crear un data.frame con los datos
+data <- data.frame(
+  Nombre = c(
+    "ALBAN ALARCON,SOFIA", "ARANGO GONZALEZ,", "ARIZA RODRIGUEZ,JUAN",
+    "BOLIVAR ARROYAVE,JUAN", "CASAS CAICEDO,", "CASTAÑEDA GUALGUAN,",
+    "CORREA ARENAS,JUAN", "DIAZ GUEVARA,JUAN", "FRANCO VALENCIA,LAURA",
+    "GARCIA ANDRADE,JUAN", "GONZALEZ VALENCIA,JUAN", "LOPEZ ROMERO,ISABEL",
+    "LOPEZ SILVA,NICOLAS", "MARINEZ BURBANO,NICOLAS", "MORALES FRANKY,OMAR",
+    "MUÑOZ AVILA,NICOLAS", "ORDOÑEZ LISCANO,JUAN", "OTERO MARIN,ISABELLA",
+    "PALAU RESTREPO,RAFAEL", "PIÑERES OSORIO,LUIS", "QUIÑONES CERTUCHE,",
+    "RIOS AGUIRRE,JHON DAVID", "VASCO VELEZ,JULIAN"
+  ),
+  Emplid = c(
+    8991684, 8976907, 8975657, 8990211, 9012082, 8964217, 8990670,
+    8980817, 8971899, 8974398, 8989547, 8986810, 8963944, 8962015,
+    8967472, 8971074, 8978929, 8956466, 9023577, 8986102, 8988993,
+    8972419, 8978937
+  ),
+  Carrera = c(
+    "Ingeniería de Sistemas", "Ingeniería Civil", "Ingeniería Mecánica",
+    "Ingeniería de Sistemas", "Ingeniería de Sistemas", "Ingeniería de Sistemas",
+    "Ingeniería de Sistemas", "Ingeniería de Sistemas", "Ingeniería de Sistemas",
+    "Ingeniería Biomédica", "Ingeniería Mecánica", "Ingeniería Mecánica",
+    "Ingeniería Civil", "Ingeniería Civil", "Biología",
+    "Ingeniería Civil", "Ingeniería Mecánica", "Ingeniería Civil",
+    "Ingeniería de Sistemas", "Ingeniería Mecánica", "Ingeniería Mecánica",
+    "Ingeniería de Sistemas", "Ingeniería Mecánica"
+  ),
+  Matriculada = c(1, 1, 2, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+  Perdida = c(0, 0, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+  Promedio = c(
+    3.67, 3.73, 3.51, 4.47, 4.37, 3.29, 4.4, 3.7, 4.46, 3.63, 4.39, 4.59,
+    3.63, 4.02, 3.95, 3.34, 3.48, 4.12, 4.37, 4.39, 4.01, 3.96, 3.67
+  )
+)
+
+
+
+# Mostrar el data.frame
+# print(data)
+
+# Instalar los paquetes necesarios si no están ya instalados
+if (!require(ggplot2)) install.packages("ggplot2")
+if (!require(dplyr)) install.packages("dplyr")
+if (!require(paletteer)) install.packages("paletteer")
+library(paletteer)
+library(ggplot2)
+library(dplyr)
+library(formattable)
+
+```
+
+
+```{r}
+
+# Suponiendo que `data` ya está definido y tiene una columna `Carrera`
+library(formattable)
+
+# Crear la tabla de frecuencias
+tabla <- table(data$Carrera) %>%
+  as.data.frame()
+
+names(tabla) <- c("Carrera", "Frecuencia")
+
+# Aplicar formato con barras de color a la columna de frecuencias
+formattable(tabla, list(
+  Frecuencia = color_bar("lightblue")
+))
+
+
+```
+
+
+<br/><br/>

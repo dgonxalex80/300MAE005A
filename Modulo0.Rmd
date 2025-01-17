@@ -1,0 +1,58 @@
+---
+title: <span style="color:#FFCC00">  </span>
+subtitle: <span style="color:#235784">Probabilidad y Estadística </span> 
+author: "dgonzalez "
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+# colores
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
+```
+
+![](img/banner000.png) 
+
+
+<br/><br/>
+
+# **Introducción**
+
+Este módulo contiene aquellos conceptos que se consideran necesarios para abordar los temas propuestos en  el curso. En caso de no recordarlos o de no  haberlos trabajado  previamente, te  recomiendo revisar el  contenido de esta modulo.
+
+Son ellos: 
+
+* Sumatoria y productoria (Módulo 1), 
+
+* Teoría de conjuntos  (Módulo 2), 
+
+* Técnicas de conteo  (Módulo 2), 
+
+* Función exponencial (Módulo 3), 
+
+* Función Logarítmica (Módulo 3), 
+
+* Derivación  (Módulo 4), 
+
+* Integración (Módulo 4).
+
+<br/><br/><br/>
+
+# **Objetivo**
+
+Al finalizar este modulo los estudiantes RECORDARAN los conceptos de SUMATORIA, PRODUCTORIA, TEORIA DE CONJUNTOS, TECNCAS DE CONTEO, FUNCION EXOPNENCIAL y LOGARÍTMICA, DERIVACIÓN e INTEGRACIÓN, conceptos que serán requeridos para la mejor comprensión de los conceptos planteados en el curso.

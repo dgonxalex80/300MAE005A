@@ -1,0 +1,59 @@
+---
+title: <span style="color:#2C5697"> </span>
+subtitle: <span style="color:#2C5697">**Probabilidad y Estadística**</span>
+author: "dgonzalez "
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    theme: flatly
+    css: style.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+
+# colores
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
+```
+
+
+![](img/banner002.png) 
+
+
+<br/><br/>
+
+<div class="highlight-box">
+
+# **Introducción**
+
+El concepto de probabilidad constituye uno de los  pilares de la estadística que permiten la construcción de  conceptos posteriores como el de  variable aleatoria e inferencia estadística. Se parte de  los  conceptos básicos para lo cual se requiere revisar los temas de teoría de  conjuntos y técnicas de conteo del módulo 0.
+
+</div>
+
+<br/><br/>
+
+<div class="highlight-box">
+
+# **Objetivo**
+
+Al finalizar el módulo el estudiante estará en capacidad de DESARROLLAR el pensamiento probabilístico mediante el cálculo e interpretación de probabilidades mediante la  comprensión de los CONCEPTOS BASICOS, los diferentes ENFOQUES y TIPOS de probabilidad  que le ayuden en la valoración del riesgo para la toma de decisiones.
+
+</div>
+
+<br/><br/>
+
+<!-- # **Mapa** -->
+
+<!-- ![](img/mapU2.png) -->
