@@ -62,7 +62,7 @@ knitr::include_graphics("img/aulainvertida1.png")
 
 <br/><br/>
 
-## **Calendario 2024-2**
+## **Calendario 2025-1**
 <div class="box2">
 
 
@@ -73,9 +73,6 @@ knitr::include_graphics("img/aulainvertida1.png")
  knitr::include_graphics("img/horario-005A-2025-1.png")
 ```
 
-Por definir cuando empezamos monitorias y  programación de parciales
-
-
 </div>
 
 <br/><br/>
@@ -83,7 +80,7 @@ Por definir cuando empezamos monitorias y  programación de parciales
 ## **Salones de clase**
 <div class="box2">
 
-|Curso     | **Grupo** | Horario       | **LUNES**  |                | **MIERCOLES** |  **JUEVES**    |             |
+|Curso     | **Grupo** | Horario       | **LUNES**  |    **MARTES**  | **MIERCOLES** |  **JUEVES**    | **VIERNES** |
 |:---------|:----------|:--------------|:-----------|:---------------|:--------------|:---------------|:------------|
 |300MAE005 |  **A**    |9:00 a 11:00   |**CR 4.3**  |                |  **PL 2.5**   |**LG 4.4**      |             |
 |          |           |               |Sesión 1    |                |  Monitoria/   |Sesión 3        |             |
