@@ -35,6 +35,8 @@ navbar:
         - text: "---------"  
         - text: "Recursos 1.1"
           href: recurso11.html  
+        - text: "Bases de datos"
+          href: basesdatos.html            
         - text: "---------"            
         - text: "Monitoria 1"
           href: monitoria1.html

@@ -86,7 +86,7 @@ Al finalizar la unidad los estudiantes estarán  en  capacidad de  RECONOCER los
 
 <br/>
 
-La presente unidad será desarrollada durante la primera semana del semestre ( 24 al 30 julio de 2024). Ademas del material suministrado se podrá contar con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de un monitor. Los documentos requeridos para esta unidad deberán ser entregados a través de la plataforma **Brightspace** hasta el 30 de julio.
+La presente unidad será desarrollada durante la primera semana del semestre ( 20 al 26 enero de 2025). Ademas del material suministrado se podrá contar con el acompañamiento del profesor en tres sesiones (Lunes, Miércoles y Viernes) y de un monitor. Los documentos requeridos para esta unidad deberán ser entregados a través de la plataforma **Brightspace** hasta el 26 de enero.
 
 Para alcanzar los objetivos planteados se propone realizar las siguientes actividades:
 
@@ -101,7 +101,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |Individual     |  **Metodología estadística:** : Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas de establecer los  objetivos y las  variables de  interés asociadas en dicho problema e identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad111.pdf** en enlace ubicado en la plataforma Bs |
 | Recursos      | [**Metodología**](https://view.genial.ly/5f1ba8da1829700da368b4ab/horizontal-infographic-review-metodologia) |
 |               | [**Recurso 1.1**](https://dgonxalex80.github.io/300MAE005D/recurso11.html)                    |
-| Fecha         | 30 de julio de 2024 |
+| Fecha         | 26 de enero de 2025 |
 | Hora          | 23:59 hora local    |
 
 <br/> 
@@ -114,7 +114,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |               | Formato ficha :**Ficha técnica** |
 |               | Excel |
 |               | RStudio |
-|Fecha          | 30 de julio  2024 |
+|Fecha          | 26 de enero de 2025  |
 |Hora           |  23:59 hora local  |
 
 <br/> 
@@ -125,7 +125,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |Recursos       | [Descargar e instalar R y RStudio 2021 -Video Rafa Gonzalez Gouveia](https://www.youtube.com/watch?v=Nmu4WPdJBRo) |
 |               | [R download](https://cran.r-project.org/) |
 |               | [RStudio download](https://rstudio.com/products/rstudio/download/) |
-| Fecha         | 30 de julio  2024 |
+| Fecha         | 26 de enero de 2025 |
 | Hora          | 23:59 hora local |
 
 <br/><br/>
@@ -154,7 +154,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |**actividad111.pdf** | Documento que contenga: Formulación de problema propuesto, definición  de los objetivos y definición de variables de interés. En este último caso detallar para cada variable su  tipo ( cualitativa o cuantitativa ) y su escala de medición ( nominal, ordinal, de intervalo o de razón).|
 |**actividad112.pdf**| Ficha técnica de  la base seleccionada |
 |||
-|**Fecha** | 30 de julio  2024|
+|**Fecha** | 26 de julio  2025|
 |**Hora límite**| 23:59  hora  local|
 |||
 

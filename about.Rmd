@@ -76,6 +76,14 @@ library(ggplot2)
 library(dplyr)
 library(formattable)
 
+
+# Crear una paleta de colores pastel
+# pastel_colors <- c("#FDBFB3", "#FFDDC1", "#FFC8A2", "#FFD8BE", "#FFCB9A", "#FFC3A0", "#FF9AA2", "#FFDAC1")
+# pastel_colors <-c("#d2fbff", "#b7dbe6", "#9cbcce", "#819eb6", "#68819e", "#4e6587", "#354b71", "#19325b")
+
+pastel_colors <- paletteer_c("ggthemes::Orange-Blue-White Diverging",5)
+
+
 ```
 
 
@@ -100,3 +108,18 @@ formattable(tabla, list(
 
 
 <br/><br/>
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Diagrama de cajas para la variable Promedio
+ggplot(data, aes(x = Carrera, y = Promedio, fill = Carrera)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  scale_fill_manual(values = pastel_colors) +
+  labs(title = "Diagrama de Cajas para la Variable Promedio por Carrera")
+
+
+
+
+
+```

@@ -1,13 +1,14 @@
 ---
 title: <span style="color:#235784"> </span>  
 author: "dgonzalez "
-subtitle: <span style="color:#235784"> </span> 
+subtitle: <span style="color:#235784">  </span> 
 output:
   html_document:
     toc: no
     toc_depth: 2
     toc_float: yes
     code_folding: hide
+    theme: flatly
     css: style.css
 ---  
 
@@ -29,8 +30,9 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 ```
 
 
-
 ![](img/banner000.png) 
+
+<br/><br/>
 
 # **SUMATORIA**
 

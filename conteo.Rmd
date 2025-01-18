@@ -31,6 +31,8 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 knitr::include_graphics("img/banner000.png")
 ```
 
+<br/><br/>
+
 # **TÉCNICAS DE CONTEO**
 
 <br/><br/>
