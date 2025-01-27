@@ -351,10 +351,6 @@ Utilizando la función `descr` del paquete `summaytools` :
 summarytools::descr(Colombia23$edad)
 ```
 
-## Tablas con gtsummary
-
-
-
 
 <br/><br/>
 
@@ -488,17 +484,11 @@ df1
 library(formattable)
 
 formattable(df, list(
-  edad = color_tile("white", "orange"),
-  grado = formatter("span", 
-                    style = x ~ ifelse(x == "A", 
-                                       style(color = "green", font.weight = "bold"), NA)),
-  area(col = c("Examen1", "Examen2")) ~ normalize_bar("#C4D8F3", 0.2),
-  Promedio = formatter("span",
-                       style = x ~ style(color = ifelse(rank(-x) <= 3, "green", "gray")),
-                       x ~ sprintf("%.2f (rank: %.2f)", x, rank(-x))),
-  Entrevista = formatter("span",
-                         style = x ~ style(color = ifelse(x, "green", "red")),
-                         x ~ icontext(ifelse(x, "ok", "remove"), ifelse(x, "Sí", "No")))
-))
+  edad = color_tile("transparent", "lightpink"),
+  Examen1 = color_bar("lightgreen"),
+  Examen2 = color_bar("lightblue"),
+  Promedio = color_bar("lightgreen"))
+)
+
 ```
 
