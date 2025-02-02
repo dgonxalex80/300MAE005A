@@ -202,7 +202,7 @@ plot(AirPassengers, main="Numero de pasajeros por mes", col=c6, lwd = 2)
 
 ### **Resumen**
 
-```{r, eval=FALSE}
+```{r}
 x=rnorm(100,100,20)
 y=rnorm(100,100,25)
 z=rbinom(100,4,0.30)
@@ -248,12 +248,7 @@ par(mfrow=c(1, 1))
 <br/><br/>
 
 
-[Visualizacion de datos con ggplot2](https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
-
-</br></br>
-
-
-### Primer paso instalar y cargar la libreria
+### Primer paso:  **Instalar y cargar la libreria**
 
 ```{r, eval=FALSE}
 # Instalar ggplot2 si no lo tienes
@@ -263,11 +258,18 @@ install.packages("ggplot2")
 library(ggplot2)
 ```
 
+<pre>
+# Instalar ggplot2 si no lo tienes
+install.packages("ggplot2")
 
+# Cargar la librería ggplot2
+library(ggplot2)
+
+</pre>
 
 </br></br>
 
-### Segundo paso : declarar la base de datos y las varibles
+### Segundo paso : **Declarar la base de datos y las varibles**
 
 
 ```{r,fig.height=5}
@@ -280,7 +282,7 @@ p
 
 </br></br>
 
-### Cuarto paso : crear grafico base
+### Cuarto paso : **Crear grafico base** con las diferentes geometrías
 
 ```{r,fig.height=5}
 p <- p + geom_point()  
@@ -299,7 +301,7 @@ p
 </br></br>
 
 
-### Quinto paso : agregar caracteristicas adicionales
+### Quinto paso : **Agregar caracteristicas adicionales**
 
 ```{r,fig.height=5}
 p <- ggplot(mtcars, aes(x = wt, y = mpg, color = cyl)) +
@@ -313,16 +315,15 @@ p
 </br></br>
 
 
-### Paso sexto : agregar títilo,  etiquetas a los ejes  leyenda aclararoria
+### Paso sexto : **Agregar títilo,  etiquetas a los ejes  leyenda aclararoria**
 
 ```{r, message=FALSE, warning=FALSE,fig.height=5}
-p <- p + labs(
-  title = "Relación entre Peso del Auto y Consumo de Combustible",
-  subtitle = "Clasificación por número de cilindros",
-  x = "Peso del Auto (1000 lbs)",
-  y = "Millas por Galón (mpg)",
-  color = "Cilindros"
-)
+p <- p + labs(title = "Relación entre Peso del Auto y Consumo de Combustible",
+              subtitle = "Clasificación por número de cilindros",
+              x = "Peso del Auto (1000 lbs)",
+              y = "Millas por Galón (mpg)",
+              color = "Cilindros"
+              )
 p
 ```
 
@@ -330,7 +331,7 @@ p
 
 </br></br>
 
-### Septimo paso : agregar una línea de tendencia
+### Septimo paso : **Agregar una línea de tendencia**
 
 ```{r, message=FALSE, warning=FALSE,fig.height=5}
 p <- p + geom_smooth(method = "lm", se = FALSE, linetype = "dashed", color = "black")
@@ -339,7 +340,7 @@ p
 
 </br></br>
 
-### Octavo paso : agreagar un tema o fondo
+### Octavo paso : **Agreagar un tema o fondo**
 
 ```{r}
 p <- p + theme_minimal(base_size = 14)
@@ -350,7 +351,7 @@ p
 
 </br></br>
 
-### Noveno paso : ajustar la escala de colores
+### Noveno paso : **Ajustar la escala de colores**
 
 ```{r}
 library(ggplot2)

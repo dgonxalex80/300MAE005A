@@ -725,13 +725,25 @@ t=1:100
 par(mfrow=c(2, 2))
 pie(table(z))
 barplot(table(z))
-stem(x)
-hist(x)
-boxplot(x)
-plot(x,y)
+stem(x)</code></pre>
+<pre><code>
+  The decimal point is 1 digit(s) to the right of the |
+
+   4 | 2389
+   6 | 169178999
+   8 | 001111112345778901112344445667899
+  10 | 012334444455556667777789333334456668899
+  12 | 02348835559
+  14 | 056
+  16 | 1</code></pre>
+<pre class="r"><code>hist(x)
+boxplot(x)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<pre class="r"><code>plot(x,y)
 plot(t,y, type=&quot;l&quot;)
 plot(density(x))
 par(mfrow=c(1, 1))</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-12-2.png" width="672" /></p>
 <p><br/><br/></p>
 </div>
 </div>
@@ -755,30 +767,37 @@ ajustar las escalas de los ejes</p></li>
 no dependen de los datos</p></li>
 </ul>
 <p><br/><br/></p>
-<p><a
-href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">Visualizacion
-de datos con ggplot2</a></p>
-<p></br></br></p>
 <div id="primer-paso-instalar-y-cargar-la-libreria"
 class="section level3">
-<h3>Primer paso instalar y cargar la libreria</h3>
+<h3>Primer paso: <strong>Instalar y cargar la libreria</strong></h3>
 <pre class="r"><code># Instalar ggplot2 si no lo tienes
 install.packages(&quot;ggplot2&quot;)
 
 # Cargar la librería ggplot2
 library(ggplot2)</code></pre>
+<pre>
+# Instalar ggplot2 si no lo tienes
+install.packages("ggplot2")
+
+# Cargar la librería ggplot2
+library(ggplot2)
+
+</pre>
 <p></br></br></p>
 </div>
 <div id="segundo-paso-declarar-la-base-de-datos-y-las-varibles"
 class="section level3">
-<h3>Segundo paso : declarar la base de datos y las varibles</h3>
+<h3>Segundo paso : <strong>Declarar la base de datos y las
+varibles</strong></h3>
 <pre class="r"><code>p &lt;- ggplot(mtcars, aes(x = wt, y = mpg))
 p</code></pre>
 <p><img src="recurso13_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
 <p></br></br></p>
 </div>
-<div id="cuarto-paso-crear-grafico-base" class="section level3">
-<h3>Cuarto paso : crear grafico base</h3>
+<div id="cuarto-paso-crear-grafico-base-con-las-diferentes-geometrías"
+class="section level3">
+<h3>Cuarto paso : <strong>Crear grafico base</strong> con las diferentes
+geometrías</h3>
 <pre class="r"><code>p &lt;- p + geom_point()  
 p</code></pre>
 <p><img src="recurso13_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
@@ -815,7 +834,8 @@ p</code></pre>
 </div>
 <div id="quinto-paso-agregar-caracteristicas-adicionales"
 class="section level3">
-<h3>Quinto paso : agregar caracteristicas adicionales</h3>
+<h3>Quinto paso : <strong>Agregar caracteristicas
+adicionales</strong></h3>
 <pre class="r"><code>p &lt;- ggplot(mtcars, aes(x = wt, y = mpg, color = cyl)) +
           geom_point(size = 2, alpha = 0.7)  # Tamaño y transparencia de los puntos
 p</code></pre>
@@ -825,29 +845,28 @@ p</code></pre>
 <div
 id="paso-sexto-agregar-títilo-etiquetas-a-los-ejes-leyenda-aclararoria"
 class="section level3">
-<h3>Paso sexto : agregar títilo, etiquetas a los ejes leyenda
-aclararoria</h3>
-<pre class="r"><code>p &lt;- p + labs(
-  title = &quot;Relación entre Peso del Auto y Consumo de Combustible&quot;,
-  subtitle = &quot;Clasificación por número de cilindros&quot;,
-  x = &quot;Peso del Auto (1000 lbs)&quot;,
-  y = &quot;Millas por Galón (mpg)&quot;,
-  color = &quot;Cilindros&quot;
-)
+<h3>Paso sexto : <strong>Agregar títilo, etiquetas a los ejes leyenda
+aclararoria</strong></h3>
+<pre class="r"><code>p &lt;- p + labs(title = &quot;Relación entre Peso del Auto y Consumo de Combustible&quot;,
+              subtitle = &quot;Clasificación por número de cilindros&quot;,
+              x = &quot;Peso del Auto (1000 lbs)&quot;,
+              y = &quot;Millas por Galón (mpg)&quot;,
+              color = &quot;Cilindros&quot;
+              )
 p</code></pre>
 <p><img src="recurso13_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <p></br></br></p>
 </div>
 <div id="septimo-paso-agregar-una-línea-de-tendencia"
 class="section level3">
-<h3>Septimo paso : agregar una línea de tendencia</h3>
+<h3>Septimo paso : <strong>Agregar una línea de tendencia</strong></h3>
 <pre class="r"><code>p &lt;- p + geom_smooth(method = &quot;lm&quot;, se = FALSE, linetype = &quot;dashed&quot;, color = &quot;black&quot;)
 p</code></pre>
 <p><img src="recurso13_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 <p></br></br></p>
 </div>
 <div id="octavo-paso-agreagar-un-tema-o-fondo" class="section level3">
-<h3>Octavo paso : agreagar un tema o fondo</h3>
+<h3>Octavo paso : <strong>Agreagar un tema o fondo</strong></h3>
 <pre class="r"><code>p &lt;- p + theme_minimal(base_size = 14)
 p</code></pre>
 <pre><code>`geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
@@ -856,7 +875,7 @@ p</code></pre>
 </div>
 <div id="noveno-paso-ajustar-la-escala-de-colores"
 class="section level3">
-<h3>Noveno paso : ajustar la escala de colores</h3>
+<h3>Noveno paso : <strong>Ajustar la escala de colores</strong></h3>
 <pre class="r"><code>library(ggplot2)
 
 # Asegurar que cyl es un factor
