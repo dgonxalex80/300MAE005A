@@ -600,6 +600,91 @@ knitr::include_graphics("img/paleta2.png")
 knitr::include_graphics("img/paleta3.png")
 ```
 
+
+</br></br>
+
+### **Normas EEEE**
+
+
+Las normas **EEEE** para la construcción de gráficos son principios fundamentales en la visualización de datos que garantizan claridad, precisión y eficacia en la comunicación. Estas normas son:
+
+</br></br>
+
+#### **Eficiencia**:
+
+El gráfico debe transmitir la información de manera rápida y clara.
+Evita decoraciones innecesarias (chartjunk).
+Usa escalas adecuadas para facilitar la interpretación.
+
+</br></br>
+
+#### **Eficacia**:
+
+El gráfico debe cumplir con su propósito comunicativo.
+Elige el tipo de gráfico más adecuado para los datos (barras, líneas, dispersión, etc.).
+Usa etiquetas, títulos y leyendas para orientar al lector.
+
+</br></br>
+
+#### **Exactitud**:
+
+Representa los datos de forma fiel y sin distorsiones.
+Usa escalas proporcionales y evita manipulaciones visuales que alteren la percepción.
+Si se usan porcentajes, asegúrate de que la suma sea 100%.
+
+</br></br>
+
+#### **Estética**:
+
+El diseño debe ser limpio y atractivo sin afectar la legibilidad.
+Usa colores adecuados con suficiente contraste.
+Mantén coherencia en los estilos y fuentes.
+Siguiendo estas normas, se logra que los gráficos sean interpretados correctamente y comuniquen la información de manera efectiva
+
+
+</br></br>
+
+```{r}
+ggplot(cars, aes(x = speed)) +
+  geom_histogram(fill = "steelblue", bins = 10, color = "black", alpha = 0.7) +
+  labs(
+    title = "Distribución de la Velocidad de los Automóviles",
+    x = "Velocidad (mph)",
+    y = "Frecuencia",
+    caption = "Fuente: Base de Datos 'cars' de R"
+  ) +
+  theme_minimal()
+```
+
+</br></br>
+
+```{r, warning=FALSE, message=FALSE}
+ggplot(cars, aes(x = speed, y = dist)) +
+  geom_point(color = "darkred", size = 2, alpha = 0.7) +
+  geom_smooth(method = "lm", se = FALSE, color = "black", linetype = "dashed") +
+  labs(
+    title = "Relación entre Velocidad y Distancia de Frenado",
+    x = "Velocidad (mph)",
+    y = "Distancia de Frenado (ft)",
+    caption = "Fuente: Base de Datos 'cars' de R"
+  ) +
+  theme_minimal()
+
+```
+
+
+</br></br>
+
+
+
+
+
+
+
+
+
+
+
 ![](img/pujcali.jpeg)
 
 </br></br>
