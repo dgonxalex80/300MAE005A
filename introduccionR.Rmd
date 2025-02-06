@@ -13,7 +13,7 @@ output:
 ---  
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 # colores
 c0= "#FFCC00"
@@ -294,4 +294,239 @@ install.packages("ggplot2")
 + Rmarkdown
 
 [Paquetes RStudio](https://gallery.shinyapps.io/087-crandash/)
+
+<br/><br/>
+
+### **Programación pipe**
+
+En R, el operador "pipe" (%>%) es una herramienta proporcionada por el paquete magrittr que permite encadenar una secuencia de funciones de manera más legible y fluida. Este operador toma el resultado de una expresión y lo pasa como argumento a la siguiente función, facilitando la lectura y escritura del código al estructurar las operaciones de izquierda a derecha.
+
+<br/><br/>
+
+### **Ejemplo 1**
+
+Supongamos que tenemos un vector de números y queremos calcular la media de sus valores absolutos. Sin usar el operador "pipe", el código sería:
+
+
+```{r}
+# programación convencional
+x <- c(-2, -1, 0, 1, 2)
+mean(abs(x))
+```
+
+Utilizando el operador "pipe", el mismo cálculo se puede expresar de manera más clara:
+
+
+<pre>
+library(magrittr)
+
+x <- c(-2, -1, 0, 1, 2)
+
+x %>% 
+  abs() %>% 
+    mean()
+</pre>
+
+```{r}
+library(magrittr)
+
+x <- c(-2, -1, 0, 1, 2)
+
+x %>% 
+  abs() %>% 
+    mean()
+```
+
+
+
+Aquí, x se pasa a la función abs(), y el resultado de abs(x) se pasa a mean(). Esto mejora la legibilidad al evitar la anidación de funciones.
+
+<br/><br/>
+
+### **Ejemplo 2**:
+
+Utilizaremos el conjunto de datos mtcars, que viene incluido en R. Este conjunto contiene información sobre diferentes modelos de automóviles, incluyendo variables como el consumo de combustible (mpg), el número de cilindros (cyl), la potencia (hp), entre otras.
+
+Supongamos que queremos realizar las siguientes operaciones:
+
+Filtrar los automóviles que tienen más de 6 cilindros.
+Seleccionar las columnas de mpg (millas por galón), cyl (cilindros) y hp (potencia).
+Ordenar los resultados por hp de forma descendente.
+Sin utilizar el operador "pipe", el código sería:
+
+```{r}
+library(dplyr)
+
+# Filtrar los automóviles con más de 6 cilindros
+autos_filtrados <- filter(mtcars, cyl > 6)
+
+# Seleccionar las columnas de interés
+autos_seleccionados <- select(autos_filtrados, mpg, cyl, hp)
+
+# Ordenar por potencia de forma descendente
+resultado <- arrange(autos_seleccionados, desc(hp))
+
+# Mostrar el resultado
+resultado
+```
+
+Con el operador "pipe", el mismo proceso se puede escribir de manera más concisa y legible:
+
+<pre>
+library(dplyr)
+
+mtcars %>%
+  filter(cyl > 6) %>%
+  select(mpg, cyl, hp) %>%
+  arrange(desc(hp)) 
+</pre>
+
+```{r}
+library(dplyr)
+
+mtcars %>%
+  filter(cyl > 6) %>%
+  select(mpg, cyl, hp) %>%
+  arrange(desc(hp)) 
+```
+
+En este enfoque, el conjunto de datos mtcars se pasa primero a la función filter() para seleccionar los automóviles con más de 6 cilindros. Luego, el resultado se pasa a select() para elegir las columnas mpg, cyl y hp. A continuación, se ordena por hp en orden descendente utilizando arrange(desc(hp)). Finalmente, se imprime el resultado con print().
+
+Este método mejora la legibilidad del código al encadenar las operaciones de manera secuencial, reflejando claramente el flujo de datos y las transformaciones aplicadas.
+
+Para una explicación visual y más detallada sobre el uso del operador "pipe" en R, puedes consultar el siguiente video:
+
+<br/><br/>
+
+### **Ejemplo 3**:
+
+Para generar un informe estadístico utilizando el operador "pipe" (%>%) en R, emplearemos el conjunto de datos mtcars, que viene incorporado en R. Este conjunto contiene información sobre diferentes modelos de automóviles, incluyendo variables como el consumo de combustible (mpg), el número de cilindros (cyl), la potencia (hp), entre otras.
+
+Objetivo del informe:
+
+Analizar las estadísticas descriptivas del consumo de combustible (mpg) y la potencia (hp) para los automóviles con más de 6 cilindros.
+
+Pasos a seguir:
+
+Filtrar los automóviles que tienen más de 6 cilindros.
+Seleccionar las columnas de interés: mpg y hp.
+Calcular estadísticas descriptivas para estas variables.
+Implementación en R:
+
+<pre>
+library(dplyr)
+library(psych)
+library(knitr)
+
+resultado <- mtcars %>%
+  filter(cyl > 6) %>%
+  select(mpg, hp) %>%
+  psych::describe() %>%
+  as.data.frame()
+
+kable(resultado)
+</pre>
+
+```{r}
+library(dplyr)
+library(psych)
+library(knitr)
+
+resultado <- mtcars %>%
+  filter(cyl > 6) %>%
+  select(mpg, hp) %>%
+  psych::describe() %>%
+  as.data.frame()
+
+kable(resultado)
+
+```
+
+<br/><br/>
+
+### **función subset**
+
+La función `subset()` en R se utiliza para filtrar subconjuntos de datos en un data.frame, matrix o vector, basándose en condiciones específicas. Es una alternativa al uso de `filter()` de `dplyr` y permite seleccionar filas y columnas fácilmente.
+
+##### Sintaxis
+
+`subset(x, subset, select)`
+
+Donde:
+
+`x`: Es el conjunto de datos (data.frame o matrix).
+`subset`: Es la condición lógica para filtrar filas.
+`select`: Son las columnas a seleccionar.
+
+<br/><br/>
+
+### Ejemplo 1: Filtrar filas en mtcars
+
+
+Queremos obtener solo los autos con más de 6 cilindros (cyl > 6).
+
+
+```{r}
+data(mtcars)  # Cargar el conjunto de datos
+resultado <- subset(mtcars, cyl > 6)
+print(resultado)
+```
+
+Exp
+licación:
+* Se filtran las filas donde cyl (cilindros) es mayor a 6.
+* Se mantienen todas las columnas del data.frame.
+
+<br/><br/>
+
+### Ejemplo 2: Filtrar filas y seleccionar columnas
+
+Filtrar los autos con más de 6 cilindros y seleccionar solo mpg (millas por galón) y hp (caballos de fuerza).
+
+```{r}
+resultado <- subset(mtcars, cyl > 6, select = c(mpg, hp))
+resultado
+```
+
+
+Explicación:
+
+* Se filtran las filas con cyl > 6.
+* Se seleccionan solo las columnas mpg y hp.
+
+
+
+
+<br/><br/>
+
+### **función as.numeric**
+
+La función as.numeric() en R se usa para convertir valores a formato numérico. Es útil cuando se tienen datos en otros formatos (carácter, factor, lógica) y se necesita manipularlos como números.
+
+as.numeric(x)
+
+### Ejemplo 1: Convertir un vector de caracteres a numérico
+
+<pre>
+x <- c("1", "2", "3", "4")
+x_num <- as.numeric(x)
+x_num
+</pre>
+
+
+
+```{r}
+x <- c("1", "2", "3", "4")
+x_num <- as.numeric(x)
+x_num
+```
+
+El vector x es un conjunto de caracteres ("1", "2", etc.).
+as.numeric(x) lo convierte en valores numéricos.
+
+
+
+
+
+
 

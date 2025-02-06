@@ -524,10 +524,10 @@ del lenguaje</p>
 <p>Arreglo unidimensional de valores, caracteres o cadenas</p>
 <pre class="r"><code>x=c(1,2,3,4,5)         #&lt;&lt;
 x</code></pre>
-<pre><code>## [1] 1 2 3 4 5</code></pre>
+<pre><code>[1] 1 2 3 4 5</code></pre>
 <pre class="r"><code>y=c(&quot;Muy regular&quot;, &quot;Regular&quot;, &quot;Bueno&quot;, &quot;Muy bueno&quot;, &quot;Excelente&quot;)
 y</code></pre>
-<pre><code>## [1] &quot;Muy regular&quot; &quot;Regular&quot;     &quot;Bueno&quot;       &quot;Muy bueno&quot;   &quot;Excelente&quot;</code></pre>
+<pre><code>[1] &quot;Muy regular&quot; &quot;Regular&quot;     &quot;Bueno&quot;       &quot;Muy bueno&quot;   &quot;Excelente&quot;  </code></pre>
 <p><br/><br/></p>
 </div>
 <div id="matriz" class="section level2">
@@ -536,10 +536,10 @@ y</code></pre>
 <pre class="r"><code>x=1:9
 m=matrix(x,nrow=3)   #&lt;&lt;
 m</code></pre>
-<pre><code>##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9</code></pre>
+<pre><code>     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="arrays" class="section level2">
@@ -552,26 +552,26 @@ y=10:18
 z=19:27
 mn=array(c(x,y),dim=c(3,3,3)) #&lt;&lt;
 mn</code></pre>
-<pre><code>## , , 1
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9
-## 
-## , , 2
-## 
-##      [,1] [,2] [,3]
-## [1,]   10   13   16
-## [2,]   11   14   17
-## [3,]   12   15   18
-## 
-## , , 3
-## 
-##      [,1] [,2] [,3]
-## [1,]    1    4    7
-## [2,]    2    5    8
-## [3,]    3    6    9</code></pre>
+<pre><code>, , 1
+
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9
+
+, , 2
+
+     [,1] [,2] [,3]
+[1,]   10   13   16
+[2,]   11   14   17
+[3,]   12   15   18
+
+, , 3
+
+     [,1] [,2] [,3]
+[1,]    1    4    7
+[2,]    2    5    8
+[3,]    3    6    9</code></pre>
 <p><br/><br/></p>
 </div>
 <div id="factores" class="section level2">
@@ -581,10 +581,10 @@ dividir una base en subgrupos</p>
 <pre class="r"><code>x=c(&quot;rojo&quot;, &quot;verde&quot;, &quot;azul&quot;)
 y=rep(x, times=4)
 x</code></pre>
-<pre><code>## [1] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;</code></pre>
+<pre><code>[1] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot; </code></pre>
 <pre class="r"><code>y</code></pre>
-<pre><code>##  [1] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;  &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;  &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot; 
-## [10] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;</code></pre>
+<pre><code> [1] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;  &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot;  &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot; 
+[10] &quot;rojo&quot;  &quot;verde&quot; &quot;azul&quot; </code></pre>
 <p><br/><br/></p>
 </div>
 <div id="listas" class="section level2">
@@ -623,7 +623,7 @@ conforma la función. Por ejemplo:</p>
 <p><span class="math display">\[f(x)=\dfrac{1}{(x-1)^{2}} \]</span></p>
 <pre class="r"><code>fx=function(x){1/(x-1)^2} #&lt;&lt;
 fx(100) # funcion evaluada en x=100</code></pre>
-<pre><code>## [1] 0.0001020304</code></pre>
+<pre><code>[1] 0.0001020304</code></pre>
 <p>En este caso la función es evaluada dentro de un otra función en la
 construcción de un gráfico</p>
 <pre class="r"><code>x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
@@ -776,7 +776,347 @@ inferior derecha de RStudio</li>
 </ul>
 <p><a href="https://gallery.shinyapps.io/087-crandash/">Paquetes
 RStudio</a></p>
+<p><br/><br/></p>
 </div>
+</div>
+<div id="programación-pipe" class="section level3">
+<h3><strong>Programación pipe</strong></h3>
+<p>En R, el operador “pipe” (%&gt;%) es una herramienta proporcionada
+por el paquete magrittr que permite encadenar una secuencia de funciones
+de manera más legible y fluida. Este operador toma el resultado de una
+expresión y lo pasa como argumento a la siguiente función, facilitando
+la lectura y escritura del código al estructurar las operaciones de
+izquierda a derecha.</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-1" class="section level3">
+<h3><strong>Ejemplo 1</strong></h3>
+<p>Supongamos que tenemos un vector de números y queremos calcular la
+media de sus valores absolutos. Sin usar el operador “pipe”, el código
+sería:</p>
+<pre class="r"><code># programación convencional
+x &lt;- c(-2, -1, 0, 1, 2)
+mean(abs(x))</code></pre>
+<pre><code>[1] 1.2</code></pre>
+<p>Utilizando el operador “pipe”, el mismo cálculo se puede expresar de
+manera más clara:</p>
+<pre>
+library(magrittr)
+
+x <- c(-2, -1, 0, 1, 2)
+
+x %>% 
+  abs() %>% 
+    mean()
+</pre>
+<pre class="r"><code>library(magrittr)</code></pre>
+<pre><code>
+Adjuntando el paquete: &#39;magrittr&#39;</code></pre>
+<pre><code>The following object is masked from &#39;package:purrr&#39;:
+
+    set_names</code></pre>
+<pre><code>The following object is masked from &#39;package:tidyr&#39;:
+
+    extract</code></pre>
+<pre class="r"><code>x &lt;- c(-2, -1, 0, 1, 2)
+
+x %&gt;% 
+  abs() %&gt;% 
+    mean()</code></pre>
+<pre><code>[1] 1.2</code></pre>
+<p>Aquí, x se pasa a la función abs(), y el resultado de abs(x) se pasa
+a mean(). Esto mejora la legibilidad al evitar la anidación de
+funciones.</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-2" class="section level3">
+<h3><strong>Ejemplo 2</strong>:</h3>
+<p>Utilizaremos el conjunto de datos mtcars, que viene incluido en R.
+Este conjunto contiene información sobre diferentes modelos de
+automóviles, incluyendo variables como el consumo de combustible (mpg),
+el número de cilindros (cyl), la potencia (hp), entre otras.</p>
+<p>Supongamos que queremos realizar las siguientes operaciones:</p>
+<p>Filtrar los automóviles que tienen más de 6 cilindros. Seleccionar
+las columnas de mpg (millas por galón), cyl (cilindros) y hp (potencia).
+Ordenar los resultados por hp de forma descendente. Sin utilizar el
+operador “pipe”, el código sería:</p>
+<pre class="r"><code>library(dplyr)
+
+# Filtrar los automóviles con más de 6 cilindros
+autos_filtrados &lt;- filter(mtcars, cyl &gt; 6)
+
+# Seleccionar las columnas de interés
+autos_seleccionados &lt;- select(autos_filtrados, mpg, cyl, hp)
+
+# Ordenar por potencia de forma descendente
+resultado &lt;- arrange(autos_seleccionados, desc(hp))
+
+# Mostrar el resultado
+resultado</code></pre>
+<pre><code>                     mpg cyl  hp
+Maserati Bora       15.0   8 335
+Ford Pantera L      15.8   8 264
+Duster 360          14.3   8 245
+Camaro Z28          13.3   8 245
+Chrysler Imperial   14.7   8 230
+Lincoln Continental 10.4   8 215
+Cadillac Fleetwood  10.4   8 205
+Merc 450SE          16.4   8 180
+Merc 450SL          17.3   8 180
+Merc 450SLC         15.2   8 180
+Hornet Sportabout   18.7   8 175
+Pontiac Firebird    19.2   8 175
+Dodge Challenger    15.5   8 150
+AMC Javelin         15.2   8 150</code></pre>
+<p>Con el operador “pipe”, el mismo proceso se puede escribir de manera
+más concisa y legible:</p>
+<pre>
+library(dplyr)
+
+mtcars %>%
+  filter(cyl > 6) %>%
+  select(mpg, cyl, hp) %>%
+  arrange(desc(hp)) 
+</pre>
+<pre class="r"><code>library(dplyr)
+
+mtcars %&gt;%
+  filter(cyl &gt; 6) %&gt;%
+  select(mpg, cyl, hp) %&gt;%
+  arrange(desc(hp)) </code></pre>
+<pre><code>                     mpg cyl  hp
+Maserati Bora       15.0   8 335
+Ford Pantera L      15.8   8 264
+Duster 360          14.3   8 245
+Camaro Z28          13.3   8 245
+Chrysler Imperial   14.7   8 230
+Lincoln Continental 10.4   8 215
+Cadillac Fleetwood  10.4   8 205
+Merc 450SE          16.4   8 180
+Merc 450SL          17.3   8 180
+Merc 450SLC         15.2   8 180
+Hornet Sportabout   18.7   8 175
+Pontiac Firebird    19.2   8 175
+Dodge Challenger    15.5   8 150
+AMC Javelin         15.2   8 150</code></pre>
+<p>En este enfoque, el conjunto de datos mtcars se pasa primero a la
+función filter() para seleccionar los automóviles con más de 6
+cilindros. Luego, el resultado se pasa a select() para elegir las
+columnas mpg, cyl y hp. A continuación, se ordena por hp en orden
+descendente utilizando arrange(desc(hp)). Finalmente, se imprime el
+resultado con print().</p>
+<p>Este método mejora la legibilidad del código al encadenar las
+operaciones de manera secuencial, reflejando claramente el flujo de
+datos y las transformaciones aplicadas.</p>
+<p>Para una explicación visual y más detallada sobre el uso del operador
+“pipe” en R, puedes consultar el siguiente video:</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-3" class="section level3">
+<h3><strong>Ejemplo 3</strong>:</h3>
+<p>Para generar un informe estadístico utilizando el operador “pipe”
+(%&gt;%) en R, emplearemos el conjunto de datos mtcars, que viene
+incorporado en R. Este conjunto contiene información sobre diferentes
+modelos de automóviles, incluyendo variables como el consumo de
+combustible (mpg), el número de cilindros (cyl), la potencia (hp), entre
+otras.</p>
+<p>Objetivo del informe:</p>
+<p>Analizar las estadísticas descriptivas del consumo de combustible
+(mpg) y la potencia (hp) para los automóviles con más de 6
+cilindros.</p>
+<p>Pasos a seguir:</p>
+<p>Filtrar los automóviles que tienen más de 6 cilindros. Seleccionar
+las columnas de interés: mpg y hp. Calcular estadísticas descriptivas
+para estas variables. Implementación en R:</p>
+<pre>
+library(dplyr)
+library(psych)
+library(knitr)
+
+resultado <- mtcars %>%
+  filter(cyl > 6) %>%
+  select(mpg, hp) %>%
+  psych::describe() %>%
+  as.data.frame()
+
+kable(resultado)
+</pre>
+<pre class="r"><code>library(dplyr)
+library(psych)
+library(knitr)
+
+resultado &lt;- mtcars %&gt;%
+  filter(cyl &gt; 6) %&gt;%
+  select(mpg, hp) %&gt;%
+  psych::describe() %&gt;%
+  as.data.frame()
+
+kable(resultado)</code></pre>
+<table>
+<colgroup>
+<col width="3%" />
+<col width="4%" />
+<col width="2%" />
+<col width="8%" />
+<col width="9%" />
+<col width="6%" />
+<col width="8%" />
+<col width="8%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="10%" />
+<col width="10%" />
+<col width="10%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="right">vars</th>
+<th align="right">n</th>
+<th align="right">mean</th>
+<th align="right">sd</th>
+<th align="right">median</th>
+<th align="right">trimmed</th>
+<th align="right">mad</th>
+<th align="right">min</th>
+<th align="right">max</th>
+<th align="right">range</th>
+<th align="right">skew</th>
+<th align="right">kurtosis</th>
+<th align="right">se</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">mpg</td>
+<td align="right">1</td>
+<td align="right">14</td>
+<td align="right">15.1000</td>
+<td align="right">2.560048</td>
+<td align="right">15.2</td>
+<td align="right">15.1500</td>
+<td align="right">1.55673</td>
+<td align="right">10.4</td>
+<td align="right">19.2</td>
+<td align="right">8.8</td>
+<td align="right">-0.3628186</td>
+<td align="right">-0.5655154</td>
+<td align="right">0.6842016</td>
+</tr>
+<tr class="even">
+<td align="left">hp</td>
+<td align="right">2</td>
+<td align="right">14</td>
+<td align="right">209.2143</td>
+<td align="right">50.976886</td>
+<td align="right">192.5</td>
+<td align="right">203.6667</td>
+<td align="right">44.47800</td>
+<td align="right">150.0</td>
+<td align="right">335.0</td>
+<td align="right">185.0</td>
+<td align="right">0.9086782</td>
+<td align="right">0.0920766</td>
+<td align="right">13.6241457</td>
+</tr>
+</tbody>
+</table>
+<p><br/><br/></p>
+</div>
+<div id="función-subset" class="section level3">
+<h3><strong>función subset</strong></h3>
+<p>La función <code>subset()</code> en R se utiliza para filtrar
+subconjuntos de datos en un data.frame, matrix o vector, basándose en
+condiciones específicas. Es una alternativa al uso de
+<code>filter()</code> de <code>dplyr</code> y permite seleccionar filas
+y columnas fácilmente.</p>
+<div id="sintaxis" class="section level5">
+<h5>Sintaxis</h5>
+<p><code>subset(x, subset, select)</code></p>
+<p>Donde:</p>
+<p><code>x</code>: Es el conjunto de datos (data.frame o matrix).
+<code>subset</code>: Es la condición lógica para filtrar filas.
+<code>select</code>: Son las columnas a seleccionar.</p>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="ejemplo-1-filtrar-filas-en-mtcars" class="section level3">
+<h3>Ejemplo 1: Filtrar filas en mtcars</h3>
+<p>Queremos obtener solo los autos con más de 6 cilindros (cyl &gt;
+6).</p>
+<pre class="r"><code>data(mtcars)  # Cargar el conjunto de datos
+resultado &lt;- subset(mtcars, cyl &gt; 6)
+print(resultado)</code></pre>
+<pre><code>                     mpg cyl  disp  hp drat    wt  qsec vs am gear carb
+Hornet Sportabout   18.7   8 360.0 175 3.15 3.440 17.02  0  0    3    2
+Duster 360          14.3   8 360.0 245 3.21 3.570 15.84  0  0    3    4
+Merc 450SE          16.4   8 275.8 180 3.07 4.070 17.40  0  0    3    3
+Merc 450SL          17.3   8 275.8 180 3.07 3.730 17.60  0  0    3    3
+Merc 450SLC         15.2   8 275.8 180 3.07 3.780 18.00  0  0    3    3
+Cadillac Fleetwood  10.4   8 472.0 205 2.93 5.250 17.98  0  0    3    4
+Lincoln Continental 10.4   8 460.0 215 3.00 5.424 17.82  0  0    3    4
+Chrysler Imperial   14.7   8 440.0 230 3.23 5.345 17.42  0  0    3    4
+Dodge Challenger    15.5   8 318.0 150 2.76 3.520 16.87  0  0    3    2
+AMC Javelin         15.2   8 304.0 150 3.15 3.435 17.30  0  0    3    2
+Camaro Z28          13.3   8 350.0 245 3.73 3.840 15.41  0  0    3    4
+Pontiac Firebird    19.2   8 400.0 175 3.08 3.845 17.05  0  0    3    2
+Ford Pantera L      15.8   8 351.0 264 4.22 3.170 14.50  0  1    5    4
+Maserati Bora       15.0   8 301.0 335 3.54 3.570 14.60  0  1    5    8</code></pre>
+<p>Exp licación: * Se filtran las filas donde cyl (cilindros) es mayor a
+6. * Se mantienen todas las columnas del data.frame.</p>
+<p><br/><br/></p>
+</div>
+<div id="ejemplo-2-filtrar-filas-y-seleccionar-columnas"
+class="section level3">
+<h3>Ejemplo 2: Filtrar filas y seleccionar columnas</h3>
+<p>Filtrar los autos con más de 6 cilindros y seleccionar solo mpg
+(millas por galón) y hp (caballos de fuerza).</p>
+<pre class="r"><code>resultado &lt;- subset(mtcars, cyl &gt; 6, select = c(mpg, hp))
+resultado</code></pre>
+<pre><code>                     mpg  hp
+Hornet Sportabout   18.7 175
+Duster 360          14.3 245
+Merc 450SE          16.4 180
+Merc 450SL          17.3 180
+Merc 450SLC         15.2 180
+Cadillac Fleetwood  10.4 205
+Lincoln Continental 10.4 215
+Chrysler Imperial   14.7 230
+Dodge Challenger    15.5 150
+AMC Javelin         15.2 150
+Camaro Z28          13.3 245
+Pontiac Firebird    19.2 175
+Ford Pantera L      15.8 264
+Maserati Bora       15.0 335</code></pre>
+<p>Explicación:</p>
+<ul>
+<li>Se filtran las filas con cyl &gt; 6.</li>
+<li>Se seleccionan solo las columnas mpg y hp.</li>
+</ul>
+<p><br/><br/></p>
+</div>
+<div id="función-as.numeric" class="section level3">
+<h3><strong>función as.numeric</strong></h3>
+<p>La función as.numeric() en R se usa para convertir valores a formato
+numérico. Es útil cuando se tienen datos en otros formatos (carácter,
+factor, lógica) y se necesita manipularlos como números.</p>
+<p>as.numeric(x)</p>
+</div>
+<div id="ejemplo-1-convertir-un-vector-de-caracteres-a-numérico"
+class="section level3">
+<h3>Ejemplo 1: Convertir un vector de caracteres a numérico</h3>
+<pre>
+x <- c("1", "2", "3", "4")
+x_num <- as.numeric(x)
+x_num
+</pre>
+<pre class="r"><code>x &lt;- c(&quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;)
+x_num &lt;- as.numeric(x)
+x_num</code></pre>
+<pre><code>[1] 1 2 3 4</code></pre>
+<p>El vector x es un conjunto de caracteres (“1”, “2”, etc.).
+as.numeric(x) lo convierte en valores numéricos.</p>
 </div>
 </div>
 

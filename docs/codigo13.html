@@ -890,6 +890,7 @@ gráfica</h3>
         theme_classic()
 fig</code></pre>
 <p><img src="codigo13_files/figure-html/unnamed-chunk-28-1.png" width="672" /></p>
+<p><br/><br/></p>
 </div>
 <div id="otros-ejemplos-de-ggplot2" class="section level3">
 <h3><strong>Otros ejemplos de ggplot2</strong></h3>
@@ -913,10 +914,17 @@ fig3 </code></pre>
 <pre class="r"><code>fig=ggplot(data = diamonds, aes(x = cut, fill = color)) + 
       geom_bar(colour= &quot;black&quot;, size = 0.3 ) +  
   coord_polar()</code></pre>
-<pre><code>Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-ℹ Please use `linewidth` instead.
-This warning is displayed once every 8 hours.
-Call `lifecycle::last_lifecycle_warnings()` to see where this warning was generated.</code></pre>
+<pre><code>Warning: Using `size` aesthetic for
+lines was deprecated in
+ggplot2 3.4.0.
+ℹ Please use `linewidth`
+  instead.
+This warning is displayed
+once every 8 hours.
+Call
+`lifecycle::last_lifecycle_warnings()`
+to see where this warning was
+generated.</code></pre>
 <pre class="r"><code>fig</code></pre>
 <p><img src="codigo13_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <pre class="r"><code># Libraries

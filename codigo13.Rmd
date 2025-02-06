@@ -436,6 +436,7 @@ fig=ggplot(data=casas,  aes(x=area.con , y=precio)) + geom_point() +
 fig
 ```
 
+<br/><br/>
 
 ### **Otros ejemplos de ggplot2**
 
