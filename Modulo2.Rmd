@@ -38,7 +38,7 @@ c7= "#F7F7F7" # FONDO GRIS CLARO WEB
 
 # **Introducción**
 
-El concepto de probabilidad constituye uno de los  pilares de la estadística que permiten la construcción de  conceptos posteriores como el de  variable aleatoria e inferencia estadística. Se parte de  los  conceptos básicos para lo cual se requiere revisar los temas de teoría de  conjuntos y técnicas de conteo del módulo 0.
+El concepto de **probabilidad** constituye uno de los  pilares de la estadística que permiten la construcción de  conceptos posteriores como el de  **variable aleatoria** e **inferencia estadística**. Se parte de  los  conceptos básicos para lo cual se requiere revisar los temas de teoría de  conjuntos y técnicas de conteo del módulo 0.
 
 </div>
 
