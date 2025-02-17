@@ -74,10 +74,10 @@ palabras <- c("probabilidad", "azar", "aleatorio", "deterministico",
               "clásico", "subjetivo", "frecuentista", "evento",
               "experimento", "conjunto", "unión", "intersección",
               "marginal", "Pascal", "Fermat", "De Mére", "Gauss",
-              "Kolmogorov", "riesgo", "decisión")
+              "Kolmogorov", "riesgo", "decisión","condicional","marginal","conjunta")
 
 frecuencias <- c(11, 8, 8, 8, 8, 8, 8, 8, 8, 6, 6, 6, 6, 6, 6, 6, 6,
-                 5, 5, 5, 5, 5, 5, 5)
+                 5, 5, 5, 5, 5, 5, 5,4,4,4)
 
 # Crear un data frame con las palabras y frecuencias
 data_palabras <- data.frame(word = palabras, freq = frecuencias)
@@ -97,9 +97,9 @@ wordcloud2(data = data_palabras,
 
 Muchos relacionamos el concepto de probabilidad con los dados, pues forma parte de su origen y de su desarrollo inicial a través de preguntas y situaciones imaginarias y de alguna forma modelables desde la matemáticas. Pero este concepto va mucho mas alla como lo veremos en esta unidad.
 
-La probabilidad es un concepto que se empieza a trabajar en 1654 cuando, caballero de Mered solicita a B. Pascal le ayude a resolver un problema relacionado con juegos de mesa. En particular este caballero manifestaba que las Matemáticas presentaban un vacio, pues sus cálculos no coincidían con lo que pasaba en la realidad y como consecuencia de ellos perdía dinero en las apuestas que se presentaban en el juego. 
+La probabilidad es un concepto que se empieza a trabajar en 1654 cuando, **caballero de Mered** solicita a **B. Pascal** le ayude a resolver un problema relacionado con juegos de mesa. En particular este caballero manifestaba que las Matemáticas presentaban un vacio, pues sus cálculos no coincidían con lo que pasaba en la realidad y como consecuencia de ellos perdía dinero en las apuestas que se presentaban en el juego. 
 
-Encomendado Pascal de esta tarea empieza a compartir su trabajo con Fermat, matemático y de la correspondencia de estos dos brillantes matemáticos nace los principios y fundamentos de  lo que hoy conocemos como probabilidad
+Encomendado Pascal de esta tarea empieza a compartir su trabajo con **Fermat**, matemático y de la correspondencia de estos dos brillantes matemáticos nace los principios y fundamentos de  lo que hoy conocemos como probabilidad
 
 <br/><br/>
 
@@ -383,9 +383,6 @@ knitr::include_graphics("img/diagrama5_22.png")
 ::::
 
 
-
-
-
 <br/><br/>
 
 ### **Probabilidad simple o marginal**
@@ -410,7 +407,67 @@ knitr::include_graphics("img/diagrama5_22.png")
 
 + $P(A' \cap B')$ : probabilidad de que NO ocurra A ni B 
 
+
 <br/><br/>
+
+### **Ejemplo**
+
+Se requiere estudiar la relación entre la satisfacción del cliente y la lealtad a la marca en una empresa. Para ello, se emplea información contenida en una tabla de contingencia y posteriormente se calcularan probabilidades conjuntas y marginales relacionadas con los eventos.
+
+
+<br/><br/>
+
+#### **Varibales** 
+- **Satisfacción del Cliente**: Alta, Media, Baja
+- **Lealtad a la Marca**: Alta, Media, Baja
+
+
+La siguiente tabla recoge la respuesta dada por 150 clientes
+
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+knitr::include_graphics("img/tabla211.png")
+```
+
+<br/><br/>
+
+Bajo el enfoque frecuentista los resultado se convierten en probabilidades de obtener un cliente con las características seleccionadas
+
+```{r, echo=FALSE, out.width="60%", fig.align = "center"}
+knitr::include_graphics("img/tabla212.png")
+```
+
+
+<br/><br/><br/>
+
+### **Probabilidad simple o marginal**
+
+|       |                                                                                                        |
+|:------|:-------------------------------------------------------------------------------------------------------|
+|$P(LA)$| probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad con la marca **alta**    |
+|$P(LM)$| probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad con la marca **media**   |
+|$P(LB)$| probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad con la marca **baja**    |
+|$P(SA)$| probabilidad de que un cliente seleccionado de manera aleatoria tenga un nivel de satisfación **alta** |  
+|$P(SM)$| probabilidad de que un cliente seleccionado de manera aleatoria tenga un nivel de satisfación **media**| 
+|$P(SB)$| probabilidad de que un cliente seleccionado de manera aleatoria tenga un nivel de satisfación **baja** |
+
+
+<br/><br/><br/>
+
+### **Probabilidad conjunta** 
+
+|                 |                                                                                                                                                    |
+|:----------------|:---------------------------------------------------------------------------------------------------------------------------------------------------|			
+| $P(LA \cap SA)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **alta** con la marca y presente un nivel **alto** de satisfacción  |
+| $P(LA \cap SM)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **alta** con la marca y presente un nivel **medio** de satisfacción |
+| $P(LA \cap SB)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **alta** con la marca y presente un nivel **bajo** de satisfacción  |
+| $P(LM \cap SA)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **media** con la marca y presente un nivel **alto** de satisfacción |
+| $P(LM \cap SM)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **media** con la marca y presente un nivel **medio** de satisfacción| 
+| $P(LM \cap SB)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **media** con la marca y presente un nivel **bajo** de satisfacción |
+| $P(LB \cap SA)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **baja** con la marca y presente un nivel **alto** de satisfacción  |
+| $P(LB \cap SM)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **baja** con la marca y presente un nivel **medio** de satisfacción |  
+| $P(LB \cap SB)$ |  probabilidad de que un cliente seleccionado de manera aleatoria tenga lealtad **baja** con la marca y presente un nivel **bajo** de satisfacción  |
+
+
 
 
 

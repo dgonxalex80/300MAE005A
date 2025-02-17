@@ -219,7 +219,7 @@ Encuentre las probabilidades para los eventos:
 
 </br>
 
-En una universidad de la región hay 4135 estudiantes distribuidos en tres grupos. Primeros semestre (1 a 3), mitad de carrera (4 a7) y final de carrera (8 a 10). Esta población esta conformada por estudiantes que realizan actividades extracuricolares y aquellos que no participan en ninguna actividad, distribuidos como se muestra en la siguiente tabla:
+En una universidad de la región hay 4135 estudiantes distribuidos en tres grupos. Primeros semestre (1 a 3), mitad de carrera (4 a 7) y final de carrera (8 a 10). Esta población esta conformada por estudiantes que realizan actividades extracuricolares y aquellos que no participan en ninguna actividad, distribuidos como se muestra en la siguiente tabla:
 
 
 ```{r, fig.align='center', fig.width=6}

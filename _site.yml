@@ -72,7 +72,15 @@ navbar:
         - text: "Código 2.1"
           href: codigo21.html
         - text: "Actividad 211"
-          href: actividad211.html         
+          href: actividad211.html   
+        - text: "---------"  
+        - text: "Guía 2.2"
+          href: guia22.html            
+        - text: "Recursos 2.2"
+          href: recurso22.html  
+        - text: "Actividad 221"
+          href: taller221.html             
+          
           
         - text: "---------"    
         - text: "Monitoria 2"
