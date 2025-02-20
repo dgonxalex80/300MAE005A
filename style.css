@@ -428,8 +428,8 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 10px;
-    min-width: 200px;
-    max-width: 300px;
+    min-width: 300px;
+    max-width: 400px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -457,3 +457,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 800px) {
     .box22 {
         flex: 1
+
+img.enlarged {
+  width: 800px; /* Ajusta según necesites */
+}
