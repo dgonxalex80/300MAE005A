@@ -541,6 +541,7 @@ table(futbol$confed)</code></pre>
 #utilizando summarytools
 confederacion=as.factor(futbol$confed)
 summarytools::freq(confederacion, cumul = FALSE)</code></pre>
+<pre><code>Error in match.call(f, call): ... used in a situation where it does not exist</code></pre>
 <pre><code>Frequencies  
 
                  Freq   % Valid   % Total
@@ -619,6 +620,7 @@ table(c)</code></pre>
    95    99    21     3     0 </code></pre>
 <pre class="r"><code>data(&quot;iris&quot;)
 summarytools::freq(iris$Species, cumul = FALSE, headings = FALSE)</code></pre>
+<pre><code>Error in match.call(f, call): ... used in a situation where it does not exist</code></pre>
 <pre><code>
                    Freq   % Valid   % Total
 ---------------- ------ --------- ---------
@@ -934,6 +936,7 @@ cuantitativas discretas con pocos valores. En una tabla o gráfico se
 puede distinguir fácilmente.</p>
 <pre class="r"><code>#utilizando summarytools
 summarytools::freq(futbol$confed, cumul = FALSE, headings = FALSE)</code></pre>
+<pre><code>Error in match.call(f, call): ... used in a situation where it does not exist</code></pre>
 <pre><code>
                  Freq   % Valid   % Total
 -------------- ------ --------- ---------
@@ -1209,50 +1212,50 @@ resultado nos indica que muchos equipos tienen bajo nivel ofencivo y
 unos pocos son los que tienen un alto poder ofencivo.</p>
 <p><br/></p>
 <pre class="r"><code>summarytools::descr(futbol$off)</code></pre>
+<pre><code>Error in match.call(f, call): ... used in a situation where it does not exist</code></pre>
 <pre><code>Descriptive Statistics  
-value  
-N: 218  
 
-                     value
------------------ --------
-             Mean     1.17
-          Std.Dev     0.66
-              Min     0.20
-               Q1     0.69
-           Median     1.08
-               Q3     1.54
-              Max     3.54
-              MAD     0.62
-              IQR     0.85
-               CV     0.56
-         Skewness     0.82
-      SE.Skewness     0.16
-         Kurtosis     0.54
-          N.Valid   218.00
-        Pct.Valid   100.00</code></pre>
+                    futbol$off
+----------------- ------------
+             Mean         1.17
+          Std.Dev         0.66
+              Min         0.20
+               Q1         0.69
+           Median         1.08
+               Q3         1.54
+              Max         3.54
+              MAD         0.62
+              IQR         0.85
+               CV         0.56
+         Skewness         0.82
+      SE.Skewness         0.16
+         Kurtosis         0.54
+          N.Valid       218.00
+                N       218.00
+        Pct.Valid       100.00</code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>summarytools::descr(mtcars$mpg)</code></pre>
+<pre><code>Error in match.call(f, call): ... used in a situation where it does not exist</code></pre>
 <pre><code>Descriptive Statistics  
-value  
-N: 32  
 
-                     value
------------------ --------
-             Mean    20.09
-          Std.Dev     6.03
-              Min    10.40
-               Q1    15.35
-           Median    19.20
-               Q3    22.80
-              Max    33.90
-              MAD     5.41
-              IQR     7.38
-               CV     0.30
-         Skewness     0.61
-      SE.Skewness     0.41
-         Kurtosis    -0.37
-          N.Valid    32.00
-        Pct.Valid   100.00</code></pre>
+                    mtcars$mpg
+----------------- ------------
+             Mean        20.09
+          Std.Dev         6.03
+              Min        10.40
+               Q1        15.35
+           Median        19.20
+               Q3        22.80
+              Max        33.90
+              MAD         5.41
+              IQR         7.38
+               CV         0.30
+         Skewness         0.61
+      SE.Skewness         0.41
+         Kurtosis        -0.37
+          N.Valid        32.00
+                N        32.00
+        Pct.Valid       100.00</code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>d1=density(futbol$off, na.rm=TRUE); plot(d1)</code></pre>
 <p><img src="recurso12_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
@@ -1512,27 +1515,27 @@ t2</code></pre>
 describa los resultados en un párrafo</li>
 </ul>
 <pre class="r"><code>summarytools::descr(data$nivans)</code></pre>
+<pre><code>Error in match.call(f, call): ... used in a situation where it does not exist</code></pre>
 <pre><code>Descriptive Statistics  
-value  
-N: 150  
 
-                     value
------------------ --------
-             Mean    59.51
-          Std.Dev    14.13
-              Min    28.00
-               Q1    51.00
-           Median    58.00
-               Q3    68.00
-              Max    96.00
-              MAD    14.08
-              IQR    17.00
-               CV     0.24
-         Skewness     0.19
-      SE.Skewness     0.20
-         Kurtosis    -0.20
-          N.Valid   150.00
-        Pct.Valid   100.00</code></pre>
+                    data$nivans
+----------------- -------------
+             Mean         59.51
+          Std.Dev         14.13
+              Min         28.00
+               Q1         51.00
+           Median         58.00
+               Q3         68.00
+              Max         96.00
+              MAD         14.08
+              IQR         17.00
+               CV          0.24
+         Skewness          0.19
+      SE.Skewness          0.20
+         Kurtosis         -0.20
+          N.Valid        150.00
+                N        150.00
+        Pct.Valid        100.00</code></pre>
 <p>El grupo observado corresponde a un total de 150 estudiantes de las
 cuatro facultades de la universidad (aun no estaba la Facultad de
 Habitat) y presentan un valor promedio de 59.5 puntos que corresponde a
@@ -1547,6 +1550,7 @@ data$fac[data$fac==2]=&quot;Facultad de Ciencias Económicas y Administrativas&q
 data$fac[data$fac==3]=&quot;Facultad de Humanidades&quot;
 data$fac[data$fac==4]=&quot;Facultad de Salud&quot;
 summarytools::freq(data$fac, cumul = FALSE)</code></pre>
+<pre><code>Error in match.call(f, call): ... used in a situation where it does not exist</code></pre>
 <pre><code>Frequencies  
 
                                                           Freq   % Valid   % Total
