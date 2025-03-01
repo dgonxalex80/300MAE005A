@@ -384,8 +384,15 @@ x
 cat("media :" ,mean(x))
 ```
 
- <br/> <br/>
+
  
+ 
+ **La media se emplea cuando los datos son simétricos y no se poseen datos atípicos.**
+ 
+  
+<br/> <br/>
+
+
 ### **Mediana** 
 
 **Me** :Es el número que divide la muestra en dos partes de igual proporción (50% : 50%). Es decir que corresponde a:

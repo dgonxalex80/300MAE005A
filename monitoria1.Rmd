@@ -551,7 +551,7 @@ Debido a que la muestra obtenida constituye una muestra representativa del proce
 
 Un grupo de estudiantes de la universidad, preocupados por el incremento del uso de los vapeadores entre los jóvenes, realizan un estudio acerca de los efectos de su uso sobre los patrones de sueño. Para estudiar el problema miden el tiempo en minutos que se tarda un joven en quedarse dormido. Con el fin de tener un grupo de referencia, la observación se realiza en jóvenes que utilizan el vapeador y los que lo usan. Los resultados obtenidos fueron los siguientes
 
-```{r}
+```{r, warning=FALSE, message=FALSE}
 # Vapeadores  
 x = c(69.3, 56.0, 22.1, 47.6, 53.2, 48.1, 52.7, 34.4, 60.2, 43.8, 23.2, 33.8, 45.5, 55.2, 48.2)
 cat("x = ", x, "\n")
@@ -603,7 +603,7 @@ Determine el valor de verdad (verdadera - V, falsa - F) para cada una de las sig
 <div class="box1 with-label">
 <div class="label">Problema 16</div>
 
-Diez estudiantes que realizan practica estudiantil reciben un salario mensual durante su trabajo en miles de pesos :
+Diez estudiantes que realizan practica estudiantil reciben un salario mensual durante su trabajo en millones de pesos :
 
 
 ```{r}
