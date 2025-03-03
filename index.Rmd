@@ -116,7 +116,7 @@ dgonzalez@javerianacali.edu.co
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-# knitr::include_graphics("img/atencion2.png")
+knitr::include_graphics("img/atencion20251.png")
 ```
 
 </div>
