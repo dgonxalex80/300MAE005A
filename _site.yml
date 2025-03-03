@@ -124,7 +124,7 @@ navbar:
         - text: "Quines somos"
           href: about.html          
         - text: "Primer parcial"
-          href: primer_parcioal_20251.html            
+          href: primer_parcial_20251.html            
           
 output:
   html_document:
