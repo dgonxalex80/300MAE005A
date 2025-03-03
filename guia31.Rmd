@@ -82,11 +82,12 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 ## **Entregables** 
 
-|                   |                                       |
-|:------------------|:--------------------------------------|
+|                      |                                                                                                                    |
+|:---------------------|:-------------------------------------------------------------------------------------------------------------------|
 |**Actividad 311.pdf** | El taller tiene un valor de 50 puntos si es resuelto completamente y enviado dentro de los tiempos establecidos |
-| Fecha             | 9  de marzo de 2024 |
-| Hora límite       | 23:59  hora  local           |
+|                      | El 10 de marzo se realizará la evaluación de la actividad, sorteando uno de los ejercicios propuestos. La nota de esta evaluación será la nota de la Actividad311. Es condición necesaria para la evaluación haber entregado la actividad en pdf en la plataforma Bs.  |
+| Fecha                | 9  de marzo de 2024 |
+| Hora límite          | 23:59  hora  local           |
 
 <br/><br/><br/><br/>
 

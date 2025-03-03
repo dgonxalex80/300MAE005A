@@ -476,37 +476,212 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore"><span style="color:#2C5697"> </span></h1>
-<h3 class="subtitle"><span style="color:#2C5697"><strong>Probabilidad y
-Estadística</strong></span></h3>
+<h1 class="title toc-ignore"><span style="color:#235784"> </span></h1>
+<h3 class="subtitle"><span style="color:#235784"><strong>Módulo
+3</strong></span></h3>
 <h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p><img src="img/banner001.png" /></p>
-<p><br/><br/></p>
-<div id="introducción" class="section level1 highlight-box">
-<h1><strong>Introducción</strong></h1>
-<p>Este primer módulo te permitirá recorrer los pasos de la metodología
-estadística y realizar un análisis descriptivos de tus datos, empleando
-para ellos software estadístico y diversas bases de datos disponibles en
-internet. Para lograrlo se plantean tres unidades : Bases de datos,
-Tablas de frecuencia e indicadores descriptivos y por último la
-representación gráfica o visualización de datos. Requiere revisar los
-conceptos de sumatoria y productoria contenidos en el Modulo 0</p>
+<p><strong>PONTIFICIA UNIVERSIDAD JAVERIANA CALI</strong><br />
+Departamento de Ciencias Naturales y Matemáticas<br />
+300MAE005 Probabilidad y Estadística - grupo A</p>
+<div style="text-align: right;">
+<p><strong>Profesor:</strong> Daniel Enrique González Gómez<br />
+Cali, febrero 27 de 2025</p>
+</div>
+<div style="text-align: center;">
+<p><strong>PRIMER EXAMEN PARCIAL</strong></p>
 </div>
 <p><br/><br/></p>
-<div id="objetivo" class="section level1 highlight-box">
-<h1><strong>Objetivo</strong></h1>
-<p>Al finalizar este módulo el estudiante estará en capacidad de RESUMIR
-e INTERPRETAR información mediante la construcción de TABLAS DE
-FRECUENCIA, INDICADORES DESCRIPTIVOS Y GRAFICOS para la interpretación y
-construcción de informes estadísticos descriptivos</p>
-</div>
+<div id="punto-1" class="section level2">
+<h2>Punto 1</h2>
+<p>Una compañía de seguros de automóviles trabaja con cuatro tipos de
+autos: <strong>Rayquaza, Etenatus, Mewtwo y Groudon</strong>, sobre los
+que cuenta con la siguiente información:</p>
+<table>
+<colgroup>
+<col width="27%" />
+<col width="28%" />
+<col width="44%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Marca</th>
+<th>Proporción de autos</th>
+<th>Probabilidad de <strong>A</strong>ccidente</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>R</strong> : Rayquaza</td>
+<td><span class="math inline">\(P(R)=0.27\)</span></td>
+<td><span class="math inline">\(P(A|R) =0.03\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>E</strong> : Etenatus</td>
+<td><span class="math inline">\(P(E)=0.17\)</span></td>
+<td><span class="math inline">\(P(A|E) =0.04\)</span></td>
+</tr>
+<tr class="odd">
+<td><strong>M</strong> : Mewtwo</td>
+<td><span class="math inline">\(P(M)=0.35\)</span></td>
+<td><span class="math inline">\(P(A|M) =0.05\)</span></td>
+</tr>
+<tr class="even">
+<td><strong>G</strong> : Groudon</td>
+<td><span class="math inline">\(P(G)=0.21\)</span></td>
+<td><span class="math inline">\(P(A|G) =0.06\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Construya un diagrama de árbol que represente la información
+suministrada y a partir de los resultados obtenidos, ayude al gerente de
+la compañía a conocer qué marca tiene mayor probabilidad de accidente si
+se sabe que ha ocurrido un accidente (<strong>A</strong>). Construya un
+listado de mayor a menor.</p>
 <p><br/><br/></p>
-<!-- # **Mapa** -->
-<!-- ![](img/mapU1.png) -->
+<div id="solución" class="section level3">
+<h3><strong>Solución</strong></h3>
+<p><img src="img/diagrama.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>A partir de la identificación de las probabilidades de la tabla
+procedemos a calcular las probabilidades conjuntas:</p>
+<pre class="r"><code>P = c(0.27, 0.17, 0.35, 0.21)
+C = c(0.03,0.04,0.05,0.06)
+
+P*C</code></pre>
+<pre><code>[1] 0.0081 0.0068 0.0175 0.0126</code></pre>
+<pre class="r"><code>p = P*C/sum(P*C)
+names(p) = c(&quot;(3):P(R|A)&quot;, &quot;(4):P(E|A)&quot;, &quot;(1):P(M|A)&quot;, &quot;(2):P(G|A)&quot; )
+p</code></pre>
+<pre><code>(3):P(R|A) (4):P(E|A) (1):P(M|A) (2):P(G|A) 
+ 0.1800000  0.1511111  0.3888889  0.2800000 </code></pre>
+<p><br/><br/><br/></p>
+</div>
+</div>
+<div id="punto-2" class="section level2">
+<h2>Punto 2</h2>
+<p>Una de las principales medidas de la calidad de servicio en una
+organización es la rapidez con la que responde a quejas de clientes. El
+Centro de Servicios Informáticos de la Universidad está interesado en
+disminuir el tiempo de atención a quejas relacionadas con el mal
+funcionamiento de las máquinas virtuales. Se ha seleccionado una muestra
+con los siguientes tiempos de atención en minutos:</p>
+<p><img src="img/ojiva.png" width="80%" style="display: block; margin: auto;" /></p>
+<!-- ``` -->
+<!-- 2  | 3 -->
+<!-- 4  | 4 -->
+<!-- 6  | 4 7 8 1 1 1 3 4 5 5 8 9 -->
+<!-- 8  | 1 3 0 0 4 5 6 7 -->
+<!-- 10 | 1 6 6 6 8 8 9 9 9 9 0 3 5 5 5 5 8 -->
+<!-- 12 | 1 4 5 7 1 1 3 8 8 -->
+<!-- 14 | 6 2 -->
+<!-- ``` -->
+<!-- ``` -->
+<!-- 10.6  10.9   13.3   11.5   11.5    9.0    7.1   10.8   13.1 -->
+<!--  8.1  14.6    9.4   12.1    7.1    7.3    6.8   13.1   10.8 -->
+<!-- 13.8   9.6   11.5    6.7    7.8    9.7    9.5    7.5   10.1 -->
+<!-- 12.7  12.5    7.1   10.9   10.6   12.4   10.6    9.0    7.5 -->
+<!-- 11.5   7.4   11.3   11.8    6.4    2.3   15.2    5.4   10.9 -->
+<!-- 8.3   10.9    7.9   13.8   11.0 -->
+<!-- ``` -->
+<ul>
+<li><p><span class="math inline">\(\sum_{i=1}^{50} x_i =
+500.7\)</span></p></li>
+<li><p><span class="math inline">\(\sum_{i=1}^{50} x_i^2 =
+5869.69\)</span></p></li>
+<li><p><span class="math inline">\(\sum_{i=1}^{50} (x_i - \bar{x})^2 =
+336.4\)</span></p></li>
+</ul>
+<p>La auditoría desea verificar si el Centro Informático cumple los
+siguientes lineamientos:</p>
+<ol style="list-style-type: decimal">
+<li>No poseer datos atípicos.</li>
+<li>No exceder las 10 horas en más del 5% de la muestra.</li>
+<li>Tener un 80% de los tiempos por debajo de 8 horas.</li>
+<li>Tener una distribución con asimetría positiva.</li>
+</ol>
+<p>El responsable de la auditoría le solicita revisar el cumplimiento de
+estos lineamientos y generar un informe breve.</p>
+<p><br/><br/></p>
+<div id="solución-1" class="section level3">
+<h3><strong>Solución</strong></h3>
+<p>Primero vamos que valores corresponden las frecuiencias acumuladas
+registradas en la gáfica</p>
+<p><img src="img/ojivaP12.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Tambien requerimos estimar los valores de <span
+class="math inline">\(Q_1\)</span>, <span
+class="math inline">\(Q_2\)</span> y <span
+class="math inline">\(Q_3\)</span></p>
+<p><img src="img/ojivaQP12.png" width="80%" style="display: block; margin: auto;" /></p>
+<pre><code>  Q1   Q2   Q3 
+ 6.7  9.2 10.8 </code></pre>
+<p>Otros datos que podemos obtener de la información suministrada son la
+media y la varianza</p>
+<pre class="r"><code>media = 500.7/50
+varianza = 336.4
+
+cat(&quot;media = &quot;, media, &quot;\n&quot; )</code></pre>
+<pre><code>media =  10.014 </code></pre>
+<pre class="r"><code>cat(&quot;varianza = &quot;, varianza)</code></pre>
+<pre><code>varianza =  336.4</code></pre>
+<p>Con esta información daremos respuesta a los interrogantes</p>
+<ol style="list-style-type: decimal">
+<li>No poseer datos atípicos.</li>
+</ol>
+<pre class="r"><code>LI = Q[1]- 1.5*Q[3]-Q[1]
+LS = Q[3]+ 1.5*Q[3]-Q[1]
+
+cat(&quot;Límite inferior &quot;, LI, &quot;\n&quot;)</code></pre>
+<pre><code>Límite inferior  -16.2 </code></pre>
+<pre class="r"><code>cat(&quot;Límite superior &quot;, LS )</code></pre>
+<pre><code>Límite superior  20.3</code></pre>
+<p>Dado que el gráfico indica que no existen valores inferiores a 3, ni
+superiores a 15, podemos afirmar que no existen datos atípicos</p>
+<ol start="2" style="list-style-type: decimal">
+<li>No exceder las 10 horas en más del 5% de la muestra.</li>
+</ol>
+<p>Este requerimiento lo podemos resolver observando la cantidad de
+datos que tienen valor de 10 o menos</p>
+<p><img src="img/ojiva10.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>En ella se observa que 30 datos presentan un valor de 10 o menos los
+cuales representan el 60% (30/50 =0.6). Lo cual indica que este
+requerimiento no se cumple</p>
+<ol start="3" style="list-style-type: decimal">
+<li>Tener un 80% de los tiempos por debajo de 8 horas.</li>
+</ol>
+<p><img src="img/ojiva08.png" width="80%" style="display: block; margin: auto;" /></p>
+<p>Al observar la gráfica tenemos que aproximadamente 18 de los datos
+tienen valores iguales o inferiores a 8 (18/50 = 36). Indica esto que el
+36% de los datos presentan valores iguale o inferiores a 8. Este
+requerimiento tampoco se cumple</p>
+<ol start="4" style="list-style-type: decimal">
+<li>Tener una distribución con asimetría positiva.</li>
+</ol>
+<p>Para ello tenemos dos obsiones :</p>
+<p>Primero comparando la media y la mediana:</p>
+<ul>
+<li>Si <span class="math inline">\(\bar{x} \approx Me\)</span>, la
+distribución se considera SIMETRICA</li>
+<li>Si <span class="math inline">\(\bar{x} &gt; Me\)</span> , la
+distribución es ASIMETRICA A LA DERECHA o POSITIVA</li>
+<li>Si <span class="math inline">\(\bar{x} &lt; Me\)</span> , la
+distribución es ASIMETRICA A LA IZAQUIERDA o NEGATIVA</li>
+</ul>
+<pre class="r"><code>cat(&quot;mediana : &quot;,Q[2], &quot;\n&quot;)</code></pre>
+<pre><code>mediana :  9.2 </code></pre>
+<pre class="r"><code>cat(&quot;media   : &quot;,media)</code></pre>
+<pre><code>media   :  10.014</code></pre>
+<p>Los resultados indican una leve asimetria a la derecha</p>
+<p>El responsable de la auditoría le solicita revisar el cumplimiento de
+estos lineamientos y generar un informe breve.</p>
+<p>Los anteriores resultados indican que NO se cumplen 3 de los
+lineamientos decretados por la empresa para la atención de sus clientes.
+Se recomienda realizar una revisión de todo el proceso y así poder
+encontrar soluciones que mejore este servicio.</p>
+</div>
+</div>
 
 
 
