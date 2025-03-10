@@ -782,7 +782,10 @@ d. Doscientos paquetes seleccionados aleatoriamente contienen cinco kilogramos d
 </div>
 
 <br/><br/>	
-[**Solución 3, 4**](https://github.com/dgonzalez80/pye2021.io/blob/main/talleres/Solucion_Taller322.pdf)
+<a href="pdf/talleres/Solucion_Taller322.pdf" download>
+  <button>Descargar solución PDF</button>
+</a>
+
 
 <br/><br/><br/>
 
@@ -790,23 +793,31 @@ d. Doscientos paquetes seleccionados aleatoriamente contienen cinco kilogramos d
 
 <br/><br/>
 
-### **Caso Discreto-Discreto**
+
+<div class="box1 with-label">
+<div class="label">Caso Discreto-Discreto</div>
+
 
 <br/>
 
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/gvzybhu8GZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/gvzybhu8GZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
+
+</div>
 
 <br/><br/>
 
-### **Caso Continua-Continua**
+<div class="box1 with-label">
+<div class="label">Caso Continuo - Continuo</div>
 
 <br/>
 
 <center>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YYgn3BBqfuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="100%" height="600" src="https://www.youtube.com/embed/YYgn3BBqfuA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </center>
+</div>
+
 <br/><br/>
 
 
