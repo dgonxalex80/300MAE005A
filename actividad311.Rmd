@@ -357,43 +357,32 @@ result
 
 
 
-```{r, fig.align='center', fig.width=7, fig.height=6}
-# Cargar ggplot2
+```{r, fig.align='center', fig.width=4, fig.height=4}
+# Cargar librería
 library(ggplot2)
 
-# Definir la función f_X(x)
-fx <- function(x) {
+# Definir la función de densidad
+f_x <- function(x) {
   ifelse(x >= 0, 20000 / (x + 100)^3, 0)
 }
 
-# Crear un rango de valores para x
-x_values <- seq(0, 300, length.out = 500)
+# Crear una secuencia de valores de x
+x_vals <- seq(0, 300, length.out = 1000)
 
-# Calcular los valores de f_X(x)
-fx_values <- fx(x_values)
+# Evaluar la función en los valores de x
+y_vals <- sapply(x_vals, f_x)
 
-# Crear un dataframe con los valores
-data_fx <- data.frame(x = x_values, fx = fx_values)
+# Crear un data frame para graficar
+df <- data.frame(x = x_vals, y = y_vals)
 
-# Graficar usando ggplot2 con área sombreada
-ggplot(data_fx, aes(x = x, y = fx)) +
-  geom_line(color = "blue", size = 1.2) +  # Línea de la función
-  geom_ribbon(aes(ymin = 0, ymax = fx), fill = "lightblue", alpha = 0.5) + # Área bajo la curva
-  labs(
-    x = "x", 
-    y = "f(x)", 
-    title = expression(f(x) == frac(20000, (x + 100)^3))
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, size = 10),
-    axis.title = element_text(size = 10),
-    axis.text = element_text(size = 10)
-  ) +
-  xlim(0, 300) +
-  ylim(0, 0.025) +
-  geom_hline(yintercept = 0, linetype = "dashed") +  # Línea en y=0
-  geom_vline(xintercept = 0, linetype = "dashed")    # Línea en x=0
+# Graficar la función de densidad
+ggplot(df, aes(x, y)) +
+  geom_line(color = "blue", size = 1) +
+  labs(title = "Función de Densidad de Probabilidad",
+       x = "x (vida útil en días)",
+       y = "f(x)") +
+  theme_minimal()
+
 
 
 ```

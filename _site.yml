@@ -101,6 +101,15 @@ navbar:
           href: codigo31.html
         - text: "Actividad 311"
           href: actividad311.html   
+        - text: "---------"
+        - text: "Guía 3.2"
+          href: guia32.html            
+        - text: "Recursos 3.2"
+          href: recurso32.html  
+        - text: "Código 3.2"
+          href: codigo32.html
+        - text: "Actividad 321"
+          href: Actividad321.html           
 
         - text: "---------"         
         - text: "Monitoria 3"

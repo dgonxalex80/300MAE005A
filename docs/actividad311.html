@@ -409,6 +409,19 @@ $(document).ready(function () {
     </li>
     <li class="divider"></li>
     <li>
+      <a href="guia32.html">Guía 3.2</a>
+    </li>
+    <li>
+      <a href="recurso32.html">Recursos 3.2</a>
+    </li>
+    <li>
+      <a href="codigo32.html">Código 3.2</a>
+    </li>
+    <li>
+      <a href="Actividad321.html">Actividad 321</a>
+    </li>
+    <li class="divider"></li>
+    <li>
       <a href="monitoria3.html">Monitoria 3</a>
     </li>
   </ul>
@@ -845,42 +858,30 @@ result &lt;- integrate(fx7, lower = 0, upper = Inf)
 # Imprimir el resultado
 result</code></pre>
 <pre><code>## 1 with absolute error &lt; 4.7e-07</code></pre>
-<pre class="r"><code># Cargar ggplot2
+<pre class="r"><code># Cargar librería
 library(ggplot2)
 
-# Definir la función f_X(x)
-fx &lt;- function(x) {
+# Definir la función de densidad
+f_x &lt;- function(x) {
   ifelse(x &gt;= 0, 20000 / (x + 100)^3, 0)
 }
 
-# Crear un rango de valores para x
-x_values &lt;- seq(0, 300, length.out = 500)
+# Crear una secuencia de valores de x
+x_vals &lt;- seq(0, 300, length.out = 1000)
 
-# Calcular los valores de f_X(x)
-fx_values &lt;- fx(x_values)
+# Evaluar la función en los valores de x
+y_vals &lt;- sapply(x_vals, f_x)
 
-# Crear un dataframe con los valores
-data_fx &lt;- data.frame(x = x_values, fx = fx_values)
+# Crear un data frame para graficar
+df &lt;- data.frame(x = x_vals, y = y_vals)
 
-# Graficar usando ggplot2 con área sombreada
-ggplot(data_fx, aes(x = x, y = fx)) +
-  geom_line(color = &quot;blue&quot;, size = 1.2) +  # Línea de la función
-  geom_ribbon(aes(ymin = 0, ymax = fx), fill = &quot;lightblue&quot;, alpha = 0.5) + # Área bajo la curva
-  labs(
-    x = &quot;x&quot;, 
-    y = &quot;f(x)&quot;, 
-    title = expression(f(x) == frac(20000, (x + 100)^3))
-  ) +
-  theme_minimal() +
-  theme(
-    plot.title = element_text(hjust = 0.5, size = 10),
-    axis.title = element_text(size = 10),
-    axis.text = element_text(size = 10)
-  ) +
-  xlim(0, 300) +
-  ylim(0, 0.025) +
-  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) +  # Línea en y=0
-  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)    # Línea en x=0</code></pre>
+# Graficar la función de densidad
+ggplot(df, aes(x, y)) +
+  geom_line(color = &quot;blue&quot;, size = 1) +
+  labs(title = &quot;Función de Densidad de Probabilidad&quot;,
+       x = &quot;x (vida útil en días)&quot;,
+       y = &quot;f(x)&quot;) +
+  theme_minimal()</code></pre>
 <p><img src="actividad311_files/figure-html/unnamed-chunk-4-1.png" width="100%" style="display: block; margin: auto;" /></p>
 </div>
 
