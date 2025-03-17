@@ -59,7 +59,7 @@ knitr::include_graphics("img/banner003.png")
 
 # **Actividad 332**
 
-Cada estudiante deberá seleccionar un problema dentro de los primeros tres enunciados presentados a continuación. Además del problema seleccionado deberá también realizar el problema 4. En total debe presentar dos problemas.
+Cada estudiante tiene a si cargo dar solución a cuatro problemas empleando para ello simulación de modelos estadísticos.(ver tabla al final)  
 
 <br/><br/>
 

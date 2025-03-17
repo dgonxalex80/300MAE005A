@@ -1261,9 +1261,9 @@ $$\begin{eqnarray*}
 
 
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
- knitr::include_graphics("img/TablaZ.png")
-```
+<!-- ```{r, echo=FALSE, out.width="100%", fig.align = "center"} -->
+<!--  knitr::include_graphics("img/TablaZ.png") -->
+<!-- ``` -->
 
 
 
