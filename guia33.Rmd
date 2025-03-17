@@ -75,9 +75,9 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad        | Descripción                                                             | 
 |:----------------|:------------------------------------------------------------------------|
-|**Actividad 331**|                                                                         |    
-|**Poster**       | Construir un poster en formato A1 (59,4 cm x 84 cm).  para el modelo asignado que contenga sus principales características   |
-|Fecha entrega    | 30 de septiembre de 2024                                                |
+|**Actividad 331**| Construir un poster en formato A1 (59,4 cm x 84 cm).  para el modelo asignado que contenga sus principales características   |
+|                 | Trabajo en **grupos de dos estudiantes**                                |
+|Fecha entrega    | 27 de marzo de 2025 - **Presentación oral del poster**                  |
 |Hora             | 23:59                                                                   |
 
 
@@ -85,9 +85,9 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |                |                                                                         | 
 |:---------------|:------------------------------------------------------------------------|
-|**Activiad 332**| Cada estudiante deberá seleccionar un problema dentro de los primeros tres enunciados presentados en la Actividad332. Además del problema seleccionado deberá también realizar el Problema 4. En total debe presentar dos problemas (el problema seleccionado y el problema4). | 
+|**Activiad 332**| Cada estudiante deberá seleccionar un problema dentro de los primeros tres enunciados presentados en la Actividad332. Además del problema seleccionado deberá también realizar de forma obligatoria el Problema 4. En total debe presentar dos problemas (el problema seleccionado y el problema 4).                   | 
 |               | Trabajo individual                                                       |
-|Fecha          | 30 de septiembre  de 2024                                                |
+|Fecha          | 30 de marzo de 2025                                                      |
 |Hora           | 23:59                                                                    |
 
 <br/><br/>
@@ -111,7 +111,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad      | Descripción                             | 
 |:--------------|:----------------------------------------|
-|Actividad 331  | poster impreso y presentación del mismo |
+|Actividad 331  | poster impreso y presentación del mismo 
 |Actividad 332  | enlace de Rmd publicado en **RPub** con el desarrollo del problema asignado |
 
 

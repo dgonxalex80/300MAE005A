@@ -424,6 +424,22 @@ $(document).ready(function () {
     </li>
     <li class="divider"></li>
     <li>
+      <a href="guia33.html">Guía 3.3</a>
+    </li>
+    <li>
+      <a href="recurso33.html">Recursos 3.3</a>
+    </li>
+    <li>
+      <a href="codigo33.html">Código 3.3</a>
+    </li>
+    <li>
+      <a href="actividad331.html">Actividad 331</a>
+    </li>
+    <li>
+      <a href="actividad332.html">Actividad 332</a>
+    </li>
+    <li class="divider"></li>
+    <li>
       <a href="monitoria3.html">Monitoria 3</a>
     </li>
   </ul>
@@ -531,21 +547,17 @@ distribucion &lt;- c(&quot;binomial&quot;, &quot;Poisson&quot;, &quot;hipergeom�
                   &quot;uniforme&quot;, &quot;normal&quot;, &quot;exponencial&quot;, &quot;gamma&quot;, &quot;Weibull&quot;, &quot;Cauchy&quot;, &quot;lognormal&quot;, 
                   &quot;beta&quot;, &quot;Erlang&quot;, &quot;Gumbel&quot;, &quot;logistic&quot;, &quot;Rayleigh&quot;)
 
-nombres &lt;- c(&quot;Alonso Sanchez,Osmel&quot;, &quot;Ayala Arcila,Juan Diego&quot;, &quot;Caicedo Mosquera,Miguel Angel&quot;, 
-             &quot;Canchala Jimenez,Juan Manuel&quot;, &quot;Castañeda Perdomo,Angela Patricia&quot;, &quot;Celis Ramirez,Isabella&quot;, 
-             &quot;Coral Duque,Alejandra&quot;, &quot;Diaz Benavides,Juan Esteban&quot;, &quot;Gomez Paramo,Maria Nicolle&quot;, 
-             &quot;Hernandez Cabrera,Nicolas&quot;, &quot;Holzinger Medina,Eric&quot;, &quot;Lasso Gomez,Daniela&quot;, 
-             &quot;Martinez Londoño,Alejandro&quot;, &quot;Marulanda Poveda,Juan Pablo&quot;, &quot;Monsalve Guerrero,Gustavo Alejandro&quot;, 
-             &quot;Murcia Daza,Juan Jose&quot;, &quot;Ogonaga Garcia,Carlos Alberto&quot;, &quot;Ospina Garcia,Alejandra&quot;, 
-             &quot;Parra Mejia,Amy Sofia&quot;, &quot;Pulido Rubiano,Catalina&quot;, &quot;Rincon Barrios,Anne Katherine&quot;, 
-             &quot;Rivera Tocora,Laura Valentina&quot;, &quot;Ruiz Ceballos,Naomi&quot;, &quot;Salmeron Tofiño,Gabriela&quot;, 
-             &quot;Sanabria Chacon,Isabela&quot;, &quot;Shayeb Shayeb,Mohamad Ali Ahmad&quot;, &quot;Torres Murillo,Juan Jose&quot;, 
-             &quot;Valencia Gonzalez,Mayra Alexandra&quot;, &quot;Verano Rodriguez,Maria Alejandra&quot;, 
-             &quot;Villarroel Luengas,Juan Manuel&quot;)
+nombres &lt;- c(&quot;Alban Alarcon Sofia &quot;, &quot;Arango Gonzalez Enmanuel &quot;, &quot; Ariza Rodriguez Juan Nicolas &quot;, &quot;Bolivar Arroyave Juan Jose &quot;, 
+&quot;Casas Caicedo Alejandro &quot;, &quot;Castañeda Gualguan Alejandro &quot;, &quot;Correa Arenas Juan Andres &quot;, &quot;Diaz Guevara Juan Carlos &quot;, &quot;Florez Caceres Daniel Eduardo &quot;, 
+&quot;Franco Valencia Laura Camila &quot;, &quot; Garcia  Andrade Juan Fernando &quot;, &quot;Gonzalez Valencia Juan Felipe &quot;, &quot;
+Larrahondo Giron Juan Jose &quot;, &quot;Lopez Romero Isabel Valentina &quot;, &quot; Lopez Silva Nicolas &quot;, &quot;Marinez Burbano Nicolas &quot;, &quot;
+Morales Franky Omar Francisco &quot;, &quot;Muñoz Avila Nicolas &quot;, &quot;Ordoñez Liscano Juan Miguel &quot;, &quot;
+Otero Marin Isabella &quot;, &quot;Palau Restrepo Rafael David &quot;, &quot;Piñeres Osorio Luis David &quot;, &quot;Quiñones Certuche Christian Camilo &quot;, &quot;
+Rios Aguirre Jhon David &quot;, &quot; Vasco Velez Julian Andres &quot;)
 
-id = 1:30
+id = 1:25
 
-asignacion &lt;- sample(distribucion, 30, replace = TRUE)
+asignacion &lt;- sample(distribucion, 25, replace = TRUE)
 
 datos &lt;- data.frame(
   ID = id,
@@ -582,7 +594,7 @@ Distribución.asignada
 1
 </td>
 <td style="text-align:left;">
-Alonso Sanchez,Osmel
+Alban Alarcon Sofia
 </td>
 <td style="text-align:left;">
 Gumbel
@@ -593,7 +605,7 @@ Gumbel
 2
 </td>
 <td style="text-align:left;">
-Ayala Arcila,Juan Diego
+Arango Gonzalez Enmanuel
 </td>
 <td style="text-align:left;">
 Erlang
@@ -604,7 +616,7 @@ Erlang
 3
 </td>
 <td style="text-align:left;">
-Caicedo Mosquera,Miguel Angel
+Ariza Rodriguez Juan Nicolas
 </td>
 <td style="text-align:left;">
 hipergeométrico
@@ -615,7 +627,7 @@ hipergeométrico
 4
 </td>
 <td style="text-align:left;">
-Canchala Jimenez,Juan Manuel
+Bolivar Arroyave Juan Jose
 </td>
 <td style="text-align:left;">
 Weibull
@@ -626,7 +638,7 @@ Weibull
 5
 </td>
 <td style="text-align:left;">
-Castañeda Perdomo,Angela Patricia
+Casas Caicedo Alejandro
 </td>
 <td style="text-align:left;">
 Cauchy
@@ -637,7 +649,7 @@ Cauchy
 6
 </td>
 <td style="text-align:left;">
-Celis Ramirez,Isabella
+Castañeda Gualguan Alejandro
 </td>
 <td style="text-align:left;">
 binomial negativo
@@ -648,7 +660,7 @@ binomial negativo
 7
 </td>
 <td style="text-align:left;">
-Coral Duque,Alejandra
+Correa Arenas Juan Andres
 </td>
 <td style="text-align:left;">
 Erlang
@@ -659,7 +671,7 @@ Erlang
 8
 </td>
 <td style="text-align:left;">
-Diaz Benavides,Juan Esteban
+Diaz Guevara Juan Carlos
 </td>
 <td style="text-align:left;">
 binomial negativo
@@ -670,7 +682,7 @@ binomial negativo
 9
 </td>
 <td style="text-align:left;">
-Gomez Paramo,Maria Nicolle
+Florez Caceres Daniel Eduardo
 </td>
 <td style="text-align:left;">
 gamma
@@ -681,7 +693,7 @@ gamma
 10
 </td>
 <td style="text-align:left;">
-Hernandez Cabrera,Nicolas
+Franco Valencia Laura Camila
 </td>
 <td style="text-align:left;">
 hipergeométrico
@@ -692,7 +704,7 @@ hipergeométrico
 11
 </td>
 <td style="text-align:left;">
-Holzinger Medina,Eric
+Garcia Andrade Juan Fernando
 </td>
 <td style="text-align:left;">
 exponencial
@@ -703,7 +715,7 @@ exponencial
 12
 </td>
 <td style="text-align:left;">
-Lasso Gomez,Daniela
+Gonzalez Valencia Juan Felipe
 </td>
 <td style="text-align:left;">
 normal
@@ -714,7 +726,7 @@ normal
 13
 </td>
 <td style="text-align:left;">
-Martinez Londoño,Alejandro
+Larrahondo Giron Juan Jose
 </td>
 <td style="text-align:left;">
 Weibull
@@ -725,7 +737,7 @@ Weibull
 14
 </td>
 <td style="text-align:left;">
-Marulanda Poveda,Juan Pablo
+Lopez Romero Isabel Valentina
 </td>
 <td style="text-align:left;">
 gamma
@@ -736,7 +748,7 @@ gamma
 15
 </td>
 <td style="text-align:left;">
-Monsalve Guerrero,Gustavo Alejandro
+Lopez Silva Nicolas
 </td>
 <td style="text-align:left;">
 geométrico o de Pascal
@@ -747,7 +759,7 @@ geométrico o de Pascal
 16
 </td>
 <td style="text-align:left;">
-Murcia Daza,Juan Jose
+Marinez Burbano Nicolas
 </td>
 <td style="text-align:left;">
 Erlang
@@ -758,7 +770,7 @@ Erlang
 17
 </td>
 <td style="text-align:left;">
-Ogonaga Garcia,Carlos Alberto
+Morales Franky Omar Francisco
 </td>
 <td style="text-align:left;">
 Rayleigh
@@ -769,7 +781,7 @@ Rayleigh
 18
 </td>
 <td style="text-align:left;">
-Ospina Garcia,Alejandra
+Muñoz Avila Nicolas
 </td>
 <td style="text-align:left;">
 Cauchy
@@ -780,7 +792,7 @@ Cauchy
 19
 </td>
 <td style="text-align:left;">
-Parra Mejia,Amy Sofia
+Ordoñez Liscano Juan Miguel
 </td>
 <td style="text-align:left;">
 normal
@@ -791,7 +803,7 @@ normal
 20
 </td>
 <td style="text-align:left;">
-Pulido Rubiano,Catalina
+Otero Marin Isabella
 </td>
 <td style="text-align:left;">
 lognormal
@@ -802,7 +814,7 @@ lognormal
 21
 </td>
 <td style="text-align:left;">
-Rincon Barrios,Anne Katherine
+Palau Restrepo Rafael David
 </td>
 <td style="text-align:left;">
 Gumbel
@@ -813,7 +825,7 @@ Gumbel
 22
 </td>
 <td style="text-align:left;">
-Rivera Tocora,Laura Valentina
+Piñeres Osorio Luis David
 </td>
 <td style="text-align:left;">
 Weibull
@@ -824,7 +836,7 @@ Weibull
 23
 </td>
 <td style="text-align:left;">
-Ruiz Ceballos,Naomi
+Quiñones Certuche Christian Camilo
 </td>
 <td style="text-align:left;">
 beta
@@ -835,7 +847,7 @@ beta
 24
 </td>
 <td style="text-align:left;">
-Salmeron Tofiño,Gabriela
+Rios Aguirre Jhon David
 </td>
 <td style="text-align:left;">
 normal
@@ -846,65 +858,10 @@ normal
 25
 </td>
 <td style="text-align:left;">
-Sanabria Chacon,Isabela
+Vasco Velez Julian Andres
 </td>
 <td style="text-align:left;">
 gamma
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-26
-</td>
-<td style="text-align:left;">
-Shayeb Shayeb,Mohamad Ali Ahmad
-</td>
-<td style="text-align:left;">
-gamma
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-27
-</td>
-<td style="text-align:left;">
-Torres Murillo,Juan Jose
-</td>
-<td style="text-align:left;">
-Weibull
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-28
-</td>
-<td style="text-align:left;">
-Valencia Gonzalez,Mayra Alexandra
-</td>
-<td style="text-align:left;">
-normal
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-29
-</td>
-<td style="text-align:left;">
-Verano Rodriguez,Maria Alejandra
-</td>
-<td style="text-align:left;">
-uniforme
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-30
-</td>
-<td style="text-align:left;">
-Villarroel Luengas,Juan Manuel
-</td>
-<td style="text-align:left;">
-Poisson
 </td>
 </tr>
 </tbody>

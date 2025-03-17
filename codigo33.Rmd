@@ -394,7 +394,7 @@ Problema 3 capitulo 4 Navidi(2006)
 	qqnorm(A2)                        # gráfico de normalidad del área
 ```
 
-```{r}
+```{r, message=FALSE, warning=FALSE}
 summarytools::descr(A2)
 ```
 
@@ -405,6 +405,8 @@ summarytools::descr(A2)
 
 Esta aplicación permite calcular probabilidades desde el celular
 
-![](img/AppPD.png)
 
+```{r, echo=FALSE, out.width="40%", fig.align = "center"}
+knitr::include_graphics("img/AppPD.png")
+```
 

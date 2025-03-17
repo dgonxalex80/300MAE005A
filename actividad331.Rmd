@@ -85,21 +85,17 @@ distribucion <- c("binomial", "Poisson", "hipergeométrico", "geométrico o de P
                   "uniforme", "normal", "exponencial", "gamma", "Weibull", "Cauchy", "lognormal", 
                   "beta", "Erlang", "Gumbel", "logistic", "Rayleigh")
 
-nombres <- c("Alonso Sanchez,Osmel", "Ayala Arcila,Juan Diego", "Caicedo Mosquera,Miguel Angel", 
-             "Canchala Jimenez,Juan Manuel", "Castañeda Perdomo,Angela Patricia", "Celis Ramirez,Isabella", 
-             "Coral Duque,Alejandra", "Diaz Benavides,Juan Esteban", "Gomez Paramo,Maria Nicolle", 
-             "Hernandez Cabrera,Nicolas", "Holzinger Medina,Eric", "Lasso Gomez,Daniela", 
-             "Martinez Londoño,Alejandro", "Marulanda Poveda,Juan Pablo", "Monsalve Guerrero,Gustavo Alejandro", 
-             "Murcia Daza,Juan Jose", "Ogonaga Garcia,Carlos Alberto", "Ospina Garcia,Alejandra", 
-             "Parra Mejia,Amy Sofia", "Pulido Rubiano,Catalina", "Rincon Barrios,Anne Katherine", 
-             "Rivera Tocora,Laura Valentina", "Ruiz Ceballos,Naomi", "Salmeron Tofiño,Gabriela", 
-             "Sanabria Chacon,Isabela", "Shayeb Shayeb,Mohamad Ali Ahmad", "Torres Murillo,Juan Jose", 
-             "Valencia Gonzalez,Mayra Alexandra", "Verano Rodriguez,Maria Alejandra", 
-             "Villarroel Luengas,Juan Manuel")
+nombres <- c("Alban Alarcon Sofia ", "Arango Gonzalez Enmanuel ", " Ariza Rodriguez Juan Nicolas ", "Bolivar Arroyave Juan Jose ", 
+"Casas Caicedo Alejandro ", "Castañeda Gualguan Alejandro ", "Correa Arenas Juan Andres ", "Diaz Guevara Juan Carlos ", "Florez Caceres Daniel Eduardo ", 
+"Franco Valencia Laura Camila ", " Garcia  Andrade Juan Fernando ", "Gonzalez Valencia Juan Felipe ", "
+Larrahondo Giron Juan Jose ", "Lopez Romero Isabel Valentina ", " Lopez Silva Nicolas ", "Marinez Burbano Nicolas ", "
+Morales Franky Omar Francisco ", "Muñoz Avila Nicolas ", "Ordoñez Liscano Juan Miguel ", "
+Otero Marin Isabella ", "Palau Restrepo Rafael David ", "Piñeres Osorio Luis David ", "Quiñones Certuche Christian Camilo ", "
+Rios Aguirre Jhon David ", " Vasco Velez Julian Andres ")
 
-id = 1:30
+id = 1:25
 
-asignacion <- sample(distribucion, 30, replace = TRUE)
+asignacion <- sample(distribucion, 25, replace = TRUE)
 
 datos <- data.frame(
   ID = id,

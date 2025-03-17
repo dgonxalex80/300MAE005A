@@ -111,6 +111,17 @@ navbar:
         - text: "Actividad 321"
           href: Actividad321.html           
 
+        - text: "---------"
+        - text: "Guía 3.3"
+          href: guia33.html            
+        - text: "Recursos 3.3"
+          href: recurso33.html  
+        - text: "Código 3.3"
+          href: codigo33.html
+        - text: "Actividad 331"
+          href: actividad331.html
+        - text: "Actividad 332"
+          href: actividad332.html          
         - text: "---------"         
         - text: "Monitoria 3"
           href: monitoria3.html       

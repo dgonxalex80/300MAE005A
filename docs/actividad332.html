@@ -34,6 +34,8 @@
 <script src="site_libs/navigation/codefolding.js"></script>
 <link href="site_libs/highlightjs/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs/highlight.js"></script>
+<script src="site_libs/kePrint/kePrint.js"></script>
+<link href="site_libs/lightable/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -422,6 +424,22 @@ $(document).ready(function () {
     </li>
     <li class="divider"></li>
     <li>
+      <a href="guia33.html">Guía 3.3</a>
+    </li>
+    <li>
+      <a href="recurso33.html">Recursos 3.3</a>
+    </li>
+    <li>
+      <a href="codigo33.html">Código 3.3</a>
+    </li>
+    <li>
+      <a href="actividad331.html">Actividad 331</a>
+    </li>
+    <li>
+      <a href="actividad332.html">Actividad 332</a>
+    </li>
+    <li class="divider"></li>
+    <li>
       <a href="monitoria3.html">Monitoria 3</a>
     </li>
   </ul>
@@ -573,7 +591,7 @@ class="math inline">\(10000\)</span> años de antigüedad, por lo que
 <span class="math inline">\(X\)</span> tiene una distribución de Poisson
 con <span class="math inline">\(\lambda=45.62\)</span>.</p>
 <p><br/></p>
-<p><img src="img/piezas.png" width="20%" style="display: block; margin: auto;" /></p>
+<p><img src="img/piezas.png" width="30%" style="display: block; margin: auto;" /></p>
 <p><br/></p>
 <ol style="list-style-type: lower-alpha">
 <li>Genere una muestra simulada de 10000 valores de <span
@@ -627,7 +645,7 @@ aproximadamente simétricos?</li>
 <p><br/><br/><br/><br/></p>
 <div class="box2 with-label">
 <div class="label">
-Problema 4 - obligatorio
+Problema 4
 </div>
 <p>Estimación del valor de <span class="math inline">\(\pi\)</span> . LA
 siguiente figura sugiere como estimar el valor de <span
@@ -684,6 +702,714 @@ verdadero</p></li>
 </div>
 <p><br/></p>
 <p>Ejercicios tomados de Navidi(2006)</p>
+<p><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 5
+</div>
+<p>Una planta de manufactura produce pistones para motores de combustión
+interna. El diámetro de los pistones debe ser de 10 cm, pero debido a
+variaciones en el proceso de producción, sigue una distribución normal
+con media <span class="math inline">\(\mu = 10\)</span> cm y desviación
+estándar <span class="math inline">\(\sigma = 0.02\)</span> cm. Un
+pistón es rechazado si su diámetro está fuera del rango de 9.97 cm a
+10.03 cm.</p>
+<p><img src="img/piston.png" width="40%" style="display: block; margin: auto;" /></p>
+<ol style="list-style-type: lower-alpha">
+<li>Genere una muestra simulada de 5000 pistones.</li>
+<li>Estime la proporción de pistones rechazados por no cumplir con las
+especificaciones.</li>
+<li>Si el costo de reprocesamiento de un pistón defectuoso es de $15
+USD, estime el costo promedio de reprocesamiento por cada 5000 pistones
+fabricados.</li>
+<li>Genere un histograma del diámetro de los pistones y evalúe si se
+ajusta a la distribución normal.</li>
+<li>¿Qué estrategias podrían implementarse para reducir el número de
+pistones rechazados?</li>
+</ol>
+</div>
+<p><br/><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 6
+</div>
+<p>Un servidor web recibe en promedio 30 solicitudes por minuto. Se ha
+determinado que el número de solicitudes sigue una distribución de
+Poisson. Un equipo de desarrolladores desea simular el comportamiento
+del servidor durante las horas pico.</p>
+<p><br/>
+<img src="img/servidor.png" width="30%" style="display: block; margin: auto;" /></p>
+<p><br/></p>
+<ol style="list-style-type: lower-alpha">
+<li>Simule 10000 minutos de solicitudes utilizando la distribución de
+Poisson con <span class="math inline">\(\lambda = 30\)</span>.</li>
+<li>Estime la probabilidad de que en un minuto lleguen más de 40
+solicitudes.</li>
+<li>Si el servidor puede manejar hasta 35 solicitudes por minuto sin
+colapsar, estime la proporción de minutos en los que se sobrecarga el
+servidor.</li>
+<li>¿Qué mejoras podría implementar el equipo de sistemas para disminuir
+el riesgo de sobrecarga?</li>
+<li>Construya un histograma con la distribución de solicitudes por
+minuto. ¿Qué tan dispersa es la demanda?</li>
+</ol>
+</div>
+<p><br/><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 7
+</div>
+<p>Una constructora está evaluando la resistencia a la compresión de
+cilindros de concreto a los 28 días de curado. La resistencia sigue una
+distribución normal con media <span class="math inline">\(\mu =
+30\)</span> MPa y desviación estándar <span class="math inline">\(\sigma
+= 5\)</span> MPa. Se requiere que el 95% de los cilindros superen los 25
+MPa.</p>
+<p><br/></p>
+<p><img src="img/concreto.png" width="20%" style="display: block; margin: auto;" />
+<br/></p>
+<ol style="list-style-type: lower-alpha">
+<li>Genere una muestra simulada de 10000 cilindros de concreto.</li>
+<li>Estime el porcentaje de cilindros que cumplen con la resistencia
+mínima de 25 MPa.</li>
+<li>Estime el <span class="math inline">\(10^{o}\)</span> percentil
+(<span class="math inline">\(P_{10}\)</span>) de la resistencia a la
+compresión.</li>
+<li>Si un cilindro que no cumple cuesta $50 USD en reprocesamiento,
+estime el costo promedio asociado a los rechazos en 10000
+cilindros.</li>
+<li>¿Qué medidas de control de calidad sugerirías implementar para
+mejorar el desempeño de la mezcla de concreto?</li>
+</ol>
+</div>
+<p><br/><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 8
+</div>
+<p>Una turbina de gas tiene cuatro componentes críticos que fallan de
+manera independiente. Los tiempos de vida (en horas) de cada componente
+siguen distribuciones exponenciales:</p>
+<p>Componente 1: <span class="math inline">\(\lambda = 1/5000\)</span>
+Componente 2: <span class="math inline">\(\lambda = 1/4000\)</span>
+Componente 3: <span class="math inline">\(\lambda = 1/6000\)</span>
+Componente 4: <span class="math inline">\(\lambda = 1/5500\)</span></p>
+<p>La turbina deja de funcionar cuando el primer componente falla.</p>
+<p><br/>
+<img src="img/turbina.png" width="40%" style="display: block; margin: auto;" />
+<br/></p>
+<ol style="list-style-type: lower-alpha">
+<li>Genere 5000 simulaciones del tiempo de vida de la turbina.</li>
+<li>Estime la vida media de la turbina.</li>
+<li>Estime la probabilidad de que la turbina falle antes de 4000
+horas.</li>
+<li>Construya el histograma del tiempo de vida de la turbina y comente
+sobre su forma.</li>
+<li>¿Qué estrategias de mantenimiento preventivo se pueden
+considerar?</li>
+</ol>
+</div>
+<p><br/><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 9
+</div>
+<p>El caudal máximo diario de un río se modela como una distribución
+Gumbel con parámetros <span class="math inline">\(\mu = 500\)</span>
+m³/s y <span class="math inline">\(\beta = 100\)</span> m³/s. Un puente
+ha sido diseñado para resistir caudales de hasta 750 m³/s. Se desea
+estimar la probabilidad de que el puente sea superado en los próximos 10
+años.</p>
+<p><br/></p>
+<p><img src="img/caudal.png" width="30%" style="display: block; margin: auto;" />
+<br/></p>
+<ol style="list-style-type: lower-alpha">
+<li>Genere 3650 simulaciones (equivalente a 10 años) del caudal máximo
+diario.</li>
+<li>Estime la probabilidad de que en al menos un día en los próximos 10
+años el caudal supere los 750 m³/s.</li>
+<li>Si se desea reducir el riesgo de superación al 1%, ¿qué caudal
+máximo debería resistir el nuevo diseño del puente?</li>
+<li>Construya el histograma de los caudales simulados y analice la
+distribución.</li>
+<li>¿Qué medidas adicionales de mitigación podría implementar el
+ingeniero civil a cargo?</li>
+</ol>
+</div>
+<p><br/><br/><br/></p>
+<div id="asignación-de-problemas" class="section level2">
+<h2>Asignación de problemas</h2>
+<pre class="r"><code>set.seed(123)
+library(dplyr)
+library(kableExtra)
+
+n &lt;- 25 # Número de estudiantes
+m &lt;- 4  # Número de problemas asignados por estudiante
+
+# Genera la matriz de problemas SIN repetidos en cada fila
+# problema &lt;- t(
+#   replicate(n, sample(1:9, m, replace = FALSE))
+# )
+# 
+# problemas =saveRDS(problema, &quot;data/problemas.RDS&quot;)
+
+# Lista de nombres (verifica que la cantidad de nombres sea igual a n)
+nombres &lt;- c(
+  &quot;Alban Alarcon Sofia&quot;, &quot;Arango Gonzalez Enmanuel&quot;, &quot;Ariza Rodriguez Juan Nicolas&quot;,
+  &quot;Bolivar Arroyave Juan Jose&quot;, &quot;Casas Caicedo Alejandro&quot;, &quot;Castañeda Gualguan Alejandro&quot;,
+  &quot;Correa Arenas Juan Andres&quot;, &quot;Díaz Guevara Juan Carlos&quot;, &quot;Florez Caceres Daniel Eduardo&quot;,
+  &quot;Franco Valencia Laura Camila&quot;, &quot;Garcia Andrade Juan Fernando&quot;, &quot;Gonzalez Valencia Juan Felipe&quot;,
+  &quot;Larrahondo Giron Juan Jose&quot;, &quot;Lopez Romero Isabel Valentina&quot;, &quot;Lopez Silva Nicolas&quot;,
+  &quot;Marinez Burbano Nicolas&quot;, &quot;Morales Franky Omar Francisco&quot;, &quot;Muñoz Avila Nicolas&quot;,
+  &quot;Ordoñez Liscano Juan Miguel&quot;, &quot;Otero Marin Isabella&quot;, &quot;Palau Restrepo Rafael David&quot;,
+  &quot;Piñeres Osorio Luis David&quot;, &quot;Quiñones Certuche Christian Camilo&quot;, &quot;Rios Aguirre Jhon David&quot;,
+  &quot;Vasco Velez Julian Andres&quot;
+)
+
+problema &lt;-readRDS(&quot;data/problemas.RDS&quot;)
+
+
+# Crea el data.frame combinando nombres e ID con los problemas
+datos &lt;- data.frame(
+  ID = 1:n,
+  Nombre = nombres,
+  Problema1 = problema[, 1],
+  Problema2 = problema[, 2],
+  Problema3 = problema[, 3],
+  Problema4 = problema[, 4]
+)
+
+# Muestra la tabla en formato bonito
+datos %&gt;%
+  kbl() %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;))</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:right;">
+ID
+</th>
+<th style="text-align:left;">
+Nombre
+</th>
+<th style="text-align:right;">
+Problema1
+</th>
+<th style="text-align:right;">
+Problema2
+</th>
+<th style="text-align:right;">
+Problema3
+</th>
+<th style="text-align:right;">
+Problema4
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+Alban Alarcon Sofia
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+Arango Gonzalez Enmanuel
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+Ariza Rodriguez Juan Nicolas
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+Bolivar Arroyave Juan Jose
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:left;">
+Casas Caicedo Alejandro
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:left;">
+Castañeda Gualguan Alejandro
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:left;">
+Correa Arenas Juan Andres
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:left;">
+Díaz Guevara Juan Carlos
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:left;">
+Florez Caceres Daniel Eduardo
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10
+</td>
+<td style="text-align:left;">
+Franco Valencia Laura Camila
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11
+</td>
+<td style="text-align:left;">
+Garcia Andrade Juan Fernando
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+12
+</td>
+<td style="text-align:left;">
+Gonzalez Valencia Juan Felipe
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+7
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+13
+</td>
+<td style="text-align:left;">
+Larrahondo Giron Juan Jose
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+14
+</td>
+<td style="text-align:left;">
+Lopez Romero Isabel Valentina
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+15
+</td>
+<td style="text-align:left;">
+Lopez Silva Nicolas
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+16
+</td>
+<td style="text-align:left;">
+Marinez Burbano Nicolas
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+Morales Franky Omar Francisco
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+18
+</td>
+<td style="text-align:left;">
+Muñoz Avila Nicolas
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+19
+</td>
+<td style="text-align:left;">
+Ordoñez Liscano Juan Miguel
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:left;">
+Otero Marin Isabella
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+21
+</td>
+<td style="text-align:left;">
+Palau Restrepo Rafael David
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:left;">
+Piñeres Osorio Luis David
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+Quiñones Certuche Christian Camilo
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+6
+</td>
+<td style="text-align:right;">
+8
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+24
+</td>
+<td style="text-align:left;">
+Rios Aguirre Jhon David
+</td>
+<td style="text-align:right;">
+7
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+25
+</td>
+<td style="text-align:left;">
+Vasco Velez Julian Andres
+</td>
+<td style="text-align:right;">
+5
+</td>
+<td style="text-align:right;">
+9
+</td>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 
 
