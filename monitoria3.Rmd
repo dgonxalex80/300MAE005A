@@ -1229,9 +1229,9 @@ c. $P(300 \leq X \leq 400)$.
 
 d. $P(X\geq 550)$.
 
-e. Determine el valor de $k$ que cumpla : $P(-k < X < k)= 0.90$.
+e. Determine el valor de $k$ que cumpla : $P(\mu-k < X < \mu+k)= 0.90$.
 
-f. Determine el valor de $k$ que cumpla : $P(-k < X < k)= 0.95$.
+f. Determine el valor de $k$ que cumpla : $P(\mu-k < X < \mu+k)= 0.95$.
 
 </div>
 
