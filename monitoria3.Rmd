@@ -1221,7 +1221,7 @@ a. Realice un bosquejo de la gráfica de la función de  densidad de probabilida
 b. $P(X \leq 130)$.
 
 ```{r}
-pnorm(130, 150, 10)
+pnorm(130, 150, sqrt(1000))
 ```
 
 
