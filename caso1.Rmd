@@ -17,9 +17,9 @@ knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE, comment = N
 library(psych)
 library(summarytools)
 
-# install.packages("devtools")
-#devtools::install_github("dgonxalex80/paqueteDEG")
-#library(paqueteDEG)
+#install.packages("devtools")
+#devtools::install_github("dgonxalex80/paquetePROB")
+library(paquetePROB)
 
 # colores
 c0= "#FFCC00"

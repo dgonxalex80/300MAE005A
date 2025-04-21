@@ -223,5 +223,9 @@ b. Calcular el tamaño de muestra necesario para que un intervalo del 95% especi
 </br></br>
 
 
+
+
+
+
 Resuelve los ejercicios utilizando software estadístico **R** y verifica tus resultados con las fórmulas vistas.
 

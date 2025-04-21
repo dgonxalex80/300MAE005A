@@ -351,6 +351,22 @@ x=c(3.4, 2.8, 4.2, 2.1, 2.8, 2.4, 3.5, 4.2, 3.1, 4.1, 2.4, 3.4, 4.1, 4.0, 2.4,
 
 </div>
 
+
+<br/><br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 13</div>
+
+
+
+</div>
+
+
+
+
+
+
+
 <br/><br/><br/>
 
 <div class="box3 with-label">

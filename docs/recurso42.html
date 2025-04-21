@@ -464,6 +464,16 @@ $(document).ready(function () {
     </li>
     <li class="divider"></li>
     <li>
+      <a href="guia42.html">Guía 4.2</a>
+    </li>
+    <li>
+      <a href="recurso42.html">Recursos 4.2</a>
+    </li>
+    <li>
+      <a href="codigo42.html">Código 4.2</a>
+    </li>
+    <li class="divider"></li>
+    <li>
       <a href="monitoria4.html">Monitoria 4</a>
     </li>
   </ul>
@@ -1423,12 +1433,12 @@ mx=apply(b,1,mean)                 # se calculan m medias por fila</code></pre>
 <pre class="r"><code>ic1=quantile(mx, probs=c(0.025, 0.975)) # se calcula IC método 1
 ic1</code></pre>
 <pre><code>    2.5%    97.5% 
-4.694179 6.480143 </code></pre>
+4.704036 6.444429 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>ic2=c(2*mean(mx)-ic1[2], 2*mean(mx)-ic1[1]) # se calcula IC método 2
 ic2</code></pre>
 <pre><code>   97.5%     2.5% 
-4.609609 6.395573 </code></pre>
+4.627323 6.367716 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>hist(mx, las=1, main=&quot;Método 1&quot;, ylab = &quot; &quot;, xlab = &quot; &quot;, col=c3, 
      xlim = c(4.0, 7.0))
