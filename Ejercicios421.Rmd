@@ -1,0 +1,251 @@
+---
+title: <span style="color:#235784">**Ejercicios 421** </span>  
+subtitle: <span style="color:#235784">**Unidad 4.2**</span> 
+author: "dgonzalez "
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    theme: flatly
+---    
+
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE,
+  comment = NA
+)
+# colores
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
+paleta4=c(c0,c1,c2,c3)
+
+
+library(forcats)
+library(patchwork)
+library(lubridate)
+library(ggplot2)
+library(gridExtra)
+library(cowplot)
+library(summarytools)
+
+#library(dviz.supp)
+```
+
+
+
+</br></br></br>
+
+```{r, echo=FALSE, out.width="100%", fig.align = "left"}
+knitr::include_graphics("img/banner004.png")
+```
+
+</br></br>
+
+<div class="box2 with-label">
+
+### **1. Intervalo para la media (normal con varianza conocida)** 
+
+Una empresa dedicada al diseño de sistemas de climatización industrial ha desarrollado un nuevo sensor de temperatura. Este sensor ha sido calibrado en laboratorio y se sabe que tiene una desviación estándar constante de 1.2°C. Para verificar su precisión en campo, se toman 30 lecturas en condiciones de operación real y se obtiene una media de 75.3°C. Estime un intervalo de confianza del 95% para la temperatura real medida por el sensor.
+
+```{r}
+set.seed(101)
+datos1 <- rnorm(30, mean = 75.3, sd = 1.2)  # μ = 75.3, σ conocida = 1.2
+```
+
+</div>
+
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **2. Intervalo para la media (normal con varianza desconocida, muestra pequeña)**
+
+Un laboratorio de materiales desea conocer la resistencia promedio de un nuevo compuesto que podría usarse en estructuras de soporte para maquinaria pesada. Se realiza un ensayo destructivo en 10 muestras del material, obteniéndose los valores de resistencia. Estime un intervalo de confianza del 95% para la resistencia media del material con base en esta muestra.
+
+```{r}
+set.seed(102)
+datos2 <- rnorm(10, mean = 200, sd = 3)  # Resistencia de material
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **3. Intervalo para la media (muestra grande, TLC)**
+
+En una planta de ensamblaje automatizado, se está monitoreando el tiempo promedio que tarda una máquina en completar una operación crítica. Se recolectan datos de 100 ciclos consecutivos. Suponiendo que la distribución del tiempo es desconocida pero el tamaño muestral es suficientemente grande, estime el intervalo de confianza del 95% para el tiempo medio de operación.
+
+```{r}
+set.seed(103)
+datos3 <- rnorm(100, mean = 50, sd = 5)  # Tiempos de operación máquina
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **4. Intervalo para una proporción (n grande)**
+
+En una línea de producción de componentes electrónicos, se realiza un control de calidad sobre 200 unidades producidas. Se detecta que 18 de ellas presentan defectos que requieren reproceso. Estime un intervalo de confianza del 95% para la proporción real de productos defectuosos en esta línea de producción.
+
+```{r}
+set.seed(104)
+datos4 <- c(rep(1, 18), rep(0, 182))  # 1 = defectuoso, 0 = no defectuoso
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **5. Intervalo para una varianza**
+
+Un ingeniero de calidad está interesado en conocer qué tan consistente es el proceso de corte de piezas metálicas en una planta. Para ello, mide la longitud de 15 piezas producidas consecutivamente. Estime un intervalo de confianza del 95% para la varianza poblacional de la longitud de las piezas producidas por esta máquina.
+
+```{r}
+set.seed(105)
+datos5 <- round(rnorm(15, mean = 10, sd = 0.2), 2)  # Longitud de ejes
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **6. Intervalo para la diferencia de medias pareadas**
+
+En una planta de manufactura, se está evaluando el efecto de una recalibración sobre el tiempo que tarda una máquina en fabricar un producto. Se toma una muestra de 5 operaciones antes de la calibración y otras 5 después, en los mismos horarios y condiciones. Estime un intervalo de confianza del 95% para la diferencia promedio en tiempos de producción, suponiendo datos pareados.
+
+```{r}
+set.seed(106)
+antes <- c(21, 22, 20, 23, 21)
+despues <- antes - c(1, 1, 1, 1, 1) + rnorm(5, 0, 0.2)  # Mejora tras calibración
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **7. Intervalo para la diferencia de medias con muestras independientes (varianzas iguales)**
+
+Dos turnos de trabajo (mañana y tarde) operan la misma máquina ensambladora. Se quiere comparar el rendimiento entre los dos turnos, para lo cual se toma una muestra aleatoria de 5 días de producción para cada uno. Asumiendo que las varianzas son iguales, estime un intervalo de confianza del 95% para la diferencia de medias entre los dos turnos.
+
+```{r}
+set.seed(107)
+turno1 <- rnorm(5, mean = 90, sd = 2)
+turno2 <- rnorm(5, mean = 85, sd = 2)
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **8. Intervalo para la diferencia de medias con muestras independientes (varianzas diferentes)** 
+
+Siguiendo el caso anterior, pero ahora sin asumir que las varianzas de los dos turnos son iguales, estime el intervalo de confianza del 95% para la diferencia de medias de producción diaria entre ambos turnos utilizando el procedimiento de Welch.
+
+```{r}
+set.seed(107)
+turno1 <- rnorm(5, mean = 90, sd = 2)
+turno2 <- rnorm(5, mean = 85, sd = 2)
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **9. Intervalo para la razón de varianzas**
+
+Un ingeniero de producción sospecha que la variabilidad en la producción de la línea A es mayor que la de la línea B. Para comprobarlo, recoge datos sobre el rendimiento de ambas líneas durante una semana. Estime un intervalo de confianza del 95% para la razón entre las varianzas de ambas líneas de producción.
+
+```{r}
+set.seed(107)
+turno1 <- rnorm(5, mean = 90, sd = 2)
+turno2 <- rnorm(5, mean = 85, sd = 2)
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **10. Intervalo para la diferencia de proporciones**
+
+En dos líneas de ensamblaje de una fábrica de dispositivos médicos, se realiza una inspección sobre 200 productos de la línea A y 150 productos de la línea B. Se encuentran 18 defectuosos en la línea A y 10 en la línea B. Estime un intervalo de confianza del 95% para la diferencia de proporciones de defectuosos entre las dos líneas.
+
+```{r}
+defectuosos_A <- c(rep(1, 18), rep(0, 182))  # n = 200
+defectuosos_B <- c(rep(1, 10), rep(0, 140))  # n = 150
+
+```
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **11. Cálculo del tamaño de muestra para estimar una media**
+
+
+Una empresa que fabrica ejes para motores desea estimar con precisión la longitud promedio de sus productos. Se sabe por estudios anteriores que la desviación estándar de la longitud es aproximadamente 0.5 mm. La gerencia desea que el error de estimación no supere los 0.1 mm con un nivel de confianza del 95%.
+¿Cuál debe ser el tamaño mínimo de muestra requerido para lograr esta precisión?
+
+</div>
+
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **12. Cálculo del tamaño de muestra para estimar una proporción**
+
+
+En una planta de ensamblaje se desea estimar la proporción de productos defectuosos. En inspecciones pasadas, se ha observado que aproximadamente el 8% de los productos pueden presentar defectos. Se desea estimar esta proporción con un margen de error máximo de 3% y un nivel de confianza del 95%.
+¿Cuántos productos deben ser inspeccionados para cumplir con estos criterios?
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+### **13. Cálculo del tamaño de muestra para estimar una proporción (varianza máxima)**
+
+Un equipo de control de calidad desea diseñar un plan de muestreo para estimar la proporción de componentes defectuosos en una nueva línea de producción. Dado que no se dispone de información previa sobre la proporción de defectos, se desea asumir el escenario más conservador para garantizar un tamaño de muestra suficiente. Se quiere lograr una estimación con un margen de error no mayor al 4% y un nivel de confianza del 95%.
+¿Cuál es el tamaño mínimo de muestra requerido bajo este criterio de máxima varianza?
+
+</div>
+
+
+<br/><br/>
+
+

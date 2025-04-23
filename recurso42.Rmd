@@ -21,6 +21,13 @@ library(devtools)
 # install_github("lchiffon/wordcloud2")
 library(wordcloud)
 
+#install.packages("devtools")
+#devtools::install_github("dgonxalex80/paquetePROB")
+#devtools::install_github("dgonxalex80/paqueteDEG")
+library(paquetePROB)
+library(paqueteDEG)
+
+
 # colores
 c0= "#FFCC00"
 c1= "#FFAD42"
@@ -245,6 +252,8 @@ Se debe tomar una muestra de 1906 dias y recoger en cada uno de ellos el número
 
 
 ```{r, eval=FALSE}
+library(paquetePROB)
+library(paqueteDEG)
 # varianza
 # s2.nota=var(sample(Colombia$edad, 100))
 s2.nota =352.2395

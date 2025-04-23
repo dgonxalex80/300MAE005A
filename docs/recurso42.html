@@ -475,6 +475,9 @@ $(document).ready(function () {
     <li>
       <a href="taller421.html">Taller 421</a>
     </li>
+    <li>
+      <a href="Ejercicios421.html">Ejercicios 421</a>
+    </li>
     <li class="divider"></li>
     <li>
       <a href="monitoria4.html">Monitoria 4</a>
@@ -768,7 +771,9 @@ class="math display">\[s=\frac{\max\{x\}-\min\{x\}}{2}\]</span></p>
 \hspace{.2cm} 352.2}{1^{2}} = 1906.07 \sim 1906\]</span> Se debe tomar
 una muestra de 1906 dias y recoger en cada uno de ellos el número de
 personas muertas</p>
-<pre class="r"><code># varianza
+<pre class="r"><code>library(paquetePROB)
+library(paqueteDEG)
+# varianza
 # s2.nota=var(sample(Colombia$edad, 100))
 s2.nota =352.2395
 # confianza : 1-a
@@ -1436,12 +1441,12 @@ mx=apply(b,1,mean)                 # se calculan m medias por fila</code></pre>
 <pre class="r"><code>ic1=quantile(mx, probs=c(0.025, 0.975)) # se calcula IC método 1
 ic1</code></pre>
 <pre><code>    2.5%    97.5% 
-4.704036 6.444429 </code></pre>
+4.747607 6.445071 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>ic2=c(2*mean(mx)-ic1[2], 2*mean(mx)-ic1[1]) # se calcula IC método 2
 ic2</code></pre>
 <pre><code>   97.5%     2.5% 
-4.627323 6.367716 </code></pre>
+4.627869 6.325333 </code></pre>
 <p><br/><br/></p>
 <pre class="r"><code>hist(mx, las=1, main=&quot;Método 1&quot;, ylab = &quot; &quot;, xlab = &quot; &quot;, col=c3, 
      xlim = c(4.0, 7.0))

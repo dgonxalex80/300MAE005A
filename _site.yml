@@ -146,6 +146,8 @@ navbar:
           href: codigo42.html
         - text: "Taller 421"
           href: taller421.html
+        - text: "Ejercicios 421"
+          href: Ejercicios421.html          
         - text: "---------"         
 
         - text: "Monitoria 4"
