@@ -281,7 +281,7 @@ $$\widehat{p} \sim N\Bigg(p, \frac{p(1-p)}{n}\Bigg)$$
 
 por tanto
 
-$$\Bigg[ \hspace{.3cm} ^\widehat{p}-z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \hspace{.2cm};\hspace{.2cm} \widehat{p}+z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p}}{n}} \hspace{.3cm} \Bigg] $$
+$$\Bigg[ \hspace{.3cm} \widehat{p}-z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p})}{n}} \hspace{.2cm};\hspace{.2cm} \widehat{p}+z_{\alpha/2}\sqrt{\frac{\widehat{p}\hspace{.1cm}(1-\widehat{p})}{n}} \hspace{.3cm} \Bigg] $$
 <br/>><br/>
 
 <div class="box1 with-label">
