@@ -163,7 +163,7 @@ navbar:
     - text: "Proyecto"
       menu:
         - text: "Guía proyecto"
-          href: recurso000.html
+          href: proyecto.html
         - text: "Quines somos"
           href: about.html          
         - text: "Primer parcial"
