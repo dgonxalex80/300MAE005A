@@ -148,13 +148,18 @@ navbar:
           href: taller421.html
         - text: "Ejercicios 421"
           href: Ejercicios421.html          
-        - text: "---------"         
-
+        - text: "---------"  
+        - text: "Guía 4.3"
+          href: guia43.html            
+        - text: "Recursos 4.3"
+          href: recurso43.html  
+        - text: "Código 4.3"
+          href: codigo43.html
+        - text: "Taller 431"
+          href: taller431.html
+        - text: "---------"        
         - text: "Monitoria 4"
           href: monitoria4.html            
-        
-        
-       
     - text: "Módulo 5"
       menu:
         - text: "Módulo 5"

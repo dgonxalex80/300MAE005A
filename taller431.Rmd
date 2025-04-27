@@ -22,7 +22,8 @@ knitr::opts_chunk$set(
   echo = TRUE,
   message = FALSE, 
   warning = FALSE,
-  hiline = TRUE
+  hiline = TRUE,
+  comment = NA
 )
 # colores
 c0= "#FFCC00"
@@ -182,29 +183,6 @@ Se realizan pruebas de un nuevo lector láser manual para uso en inventarios y e
 	
 De acuerdo con la información suministrada, es posible preferir alguno de ellos?. En caso de poderlo realizar con cual se quedaría? Justifique su respuesta. En cada caso determine las pruebas de hipótesis, el estadístico de prueba apropiado, el $valor-p$ obtenido y las conclusiones resultantes.
 	
-	
-<br/><br/>
-	
-### **Ayuda**
-
-<pre>
-n1=61
-n2=61
-mx1=40
-mx2=29
-vx1=24.9
-vx2=22.7
-
-F=vx1/vx2
-qf(c(0.025,0.975),60,60)
-
-sp2=(n1*vx1+n2*vx2)/sqrt(n1+n2-2)
-T=(mx1-mx2)/sqrt(sp2*(1/n1+1/n2)
-qt(c(0.025,0.975), n1+n2-2)
-</pre>
-<br/><br/>
-
-
 </div>
 
 <br/><br/><br/>
@@ -333,19 +311,14 @@ m
 
 Los siguientes datos corresponde a las notas obtenidas por un grupo de estudiantes de la asignatura Matemáticas Fundamentales. Si la distribución de los datos es normal, podría afirmar que la prueba realizada es una prueba normalizada. En caso contrario serviría para estudiar problemas relacionados con su aprendizaje. Para un $\alpha= 0;05$, se podría afirmar que los datos proceden de una distribución normal? . Si se requiere realizar una prueba de hipótesis sobre la media de la nota $H_{o}:\mu \leq 3.3$ vs $H_{a}: \mu > 3.3$, ¿Que prueba se realizaría? 
 
-<pre>
-x=c(3.4, 2.8, 4.2, 2.1, 2.8, 2.4, 3.5, 4.2, 3.1, 4.1, 2.4, 3.4, 4.1, 4.0, 2.4, 
-    4.1, 3.4, 4.4, 3.8, 3.7, 2.2, 3.6, 2.3, 3.7, 2.8, 4.1, 2.3, 4.6, 4.6, 5.2, 
-    2.4, 2.4, 2.7, 3.8, 4.6, 4.4, 4.2, 4.4, 2.4, 3.3, 3.8, 2.9, 3.1, 2.7, 3.6, 
-    3.8, 4.4, 3.9, 2.8, 3.7)
-</pre>    
-
 
 ```{r}
 x=c(3.4, 2.8, 4.2, 2.1, 2.8, 2.4, 3.5, 4.2, 3.1, 4.1, 2.4, 3.4, 4.1, 4.0, 2.4, 
     4.1, 3.4, 4.4, 3.8, 3.7, 2.2, 3.6, 2.3, 3.7, 2.8, 4.1, 2.3, 4.6, 4.6, 5.2, 
     2.4, 2.4, 2.7, 3.8, 4.6, 4.4, 4.2, 4.4, 2.4, 3.3, 3.8, 2.9, 3.1, 2.7, 3.6, 
     3.8, 4.4, 3.9, 2.8, 3.7)
+x
+
 ```
 	
 

@@ -161,12 +161,17 @@ El proyecto se puede basar en los datos contenidos en las plataformas de bases d
 <br/><br/>
 
 ### Grupo 1    
+* Juan José Bolivar
+* Juan Andrés Correa
+* Alejandro Casas
 
 Tema:  
 
 <br/><br/>
 
 ### Grupo 2
+* Juan Miguel Ordóñez 
+* Juan José larrahondo
 
 Tema:  
 
@@ -174,11 +179,17 @@ Tema:
 
 ### Grupo 3
 
+* Luis David Piñeres
+* Juan Felipe González
+
 Tema:  
 
 <br/><br/>
 
 ### Grupo 4
+
+* Isabella Otero 
+* Enmanuel Arango
 
 Tema:
 
@@ -186,11 +197,18 @@ Tema:
 
 ### Grupo 5
 
+* Christian Quiñones 
+* Isabel López
+
 Tema:  
 
 <br/><br/>
 
 ### Grupo 6
+
+* Nicolás López 
+* Alejandro gualguanosky 
+* Nicolás Muñoz
 
 Tema:
 
@@ -198,5 +216,18 @@ Tema:
 
 ### Grupo 7 
 
+* Julian Vasco
+* Juan Carlos Diaz
 
 Tema:
+
+<br/><br/>
+
+### Grupo 8 
+
+* Sofia Albán 
+* Rafael Palau
+
+Tema:
+
+
