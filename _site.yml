@@ -164,6 +164,10 @@ navbar:
       menu:
         - text: "Módulo 5"
           href: Modulo5.html
+        - text: "Recursos 5.1"
+          href: recurso51.html  
+        - text: "Código 5.1"
+          href: codigo51.html          
 
     - text: "Proyecto"
       menu:
