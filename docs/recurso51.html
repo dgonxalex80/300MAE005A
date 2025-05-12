@@ -14,13 +14,13 @@
 
 <title> </title>
 
-<script src="site_libs/header-attrs/header-attrs.js"></script>
-<script src="site_libs/jquery/jquery-3.6.0.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap/css/flatly.min.css" rel="stylesheet" />
-<script src="site_libs/bootstrap/js/bootstrap.min.js"></script>
-<script src="site_libs/bootstrap/shim/html5shiv.min.js"></script>
-<script src="site_libs/bootstrap/shim/respond.min.js"></script>
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
 <style>h1 {font-size: 34px;}
        h1.title {font-size: 38px;}
        h2 {font-size: 30px;}
@@ -30,12 +30,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
-<script src="site_libs/navigation/tabsets.js"></script>
-<script src="site_libs/navigation/codefolding.js"></script>
-<link href="site_libs/highlightjs/default.css" rel="stylesheet" />
-<script src="site_libs/highlightjs/highlight.js"></script>
-<link href="site_libs/font-awesome/css/all.min.css" rel="stylesheet" />
-<link href="site_libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -1119,7 +1119,7 @@ F-statistic: 54.41 on 1 and 10 DF,  p-value: 2.38e-05</code></pre>
 <th align="left">parámetro</th>
 <th align="left"><span class="math inline">\(Ho\)</span></th>
 <th align="left"><span class="math inline">\(Ha\)</span></th>
-<th align="left"><span class="math inline">\(EdeP\)</span></th>
+<th align="left"><span class="math inline">\(EdeP: T\)</span></th>
 <th align="left">valor-p</th>
 </tr>
 </thead>
@@ -1127,26 +1127,20 @@ F-statistic: 54.41 on 1 and 10 DF,  p-value: 2.38e-05</code></pre>
 <tr class="odd">
 <td align="left">intercepto <span
 class="math inline">\(\beta_{0}\)</span></td>
-<td align="left"><span class="math inline">\(Ho: \beta_{0} =
+<td align="left"><span class="math inline">\(\beta_{0} = 0\)</span></td>
+<td align="left"><span class="math inline">\(\beta_{0} \neq
 0\)</span></td>
-<td align="left"><span class="math inline">\(Ha: \beta_{0} \neq
-0\)</span></td>
-<td align="left"><span class="math inline">\(EdeP:\)</span> <span
-class="math inline">\(t=1,123\)</span></td>
-<td align="left"><span class="math inline">\(valor-p:\)</span> <span
-class="math inline">\(0.288\)</span></td>
+<td align="left"><span class="math inline">\(1,123\)</span></td>
+<td align="left"><span class="math inline">\(0.288\)</span></td>
 </tr>
 <tr class="even">
 <td align="left">pendiente <span
 class="math inline">\(\beta_{1}\)</span></td>
-<td align="left"><span class="math inline">\(Ho: \beta_{1} =
+<td align="left"><span class="math inline">\(\beta_{1} = 0\)</span></td>
+<td align="left"><span class="math inline">\(\beta_{1} \neq
 0\)</span></td>
-<td align="left"><span class="math inline">\(Ha: \beta_{1} \neq
-0\)</span></td>
-<td align="left"><span class="math inline">\(EdeP :\)</span> <span
-class="math inline">\(t=7.376\)</span></td>
-<td align="left"><span class="math inline">\(valor-p:\)</span> <span
-class="math inline">\(0.00005\)</span></td>
+<td align="left"><span class="math inline">\(7.376\)</span></td>
+<td align="left"><span class="math inline">\(0.00005\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -1482,7 +1476,7 @@ individual sobre la significancia de cada coeficiente asi:</p>
 <th align="left">parámetro</th>
 <th align="left"><span class="math inline">\(Ho\)</span></th>
 <th align="left"><span class="math inline">\(Ha\)</span></th>
-<th align="left"><span class="math inline">\(EdeP\)</span></th>
+<th align="left"><span class="math inline">\(EdeP: T\)</span></th>
 <th align="left"><code>valor-p</code></th>
 </tr>
 </thead>
@@ -1493,7 +1487,7 @@ class="math inline">\(\beta_{0}\)</span></td>
 <td align="left"><span class="math inline">\(\beta_{0} =0\)</span></td>
 <td align="left"><span class="math inline">\(\beta_{0}\neq
 0\)</span></td>
-<td align="left">$ T = 0.158$</td>
+<td align="left"><span class="math inline">\(0.158\)</span></td>
 <td align="left"><span class="math inline">\(0.876\)</span></td>
 </tr>
 <tr class="even">
@@ -1502,7 +1496,7 @@ class="math inline">\(\beta_{1}\)</span></td>
 <td align="left"><span class="math inline">\(\beta_{1} =0\)</span></td>
 <td align="left"><span class="math inline">\(\beta_{1} \neq
 0\)</span></td>
-<td align="left">$ T = 10.945$</td>
+<td align="left"><span class="math inline">\(10.945\)</span></td>
 <td align="left"><span class="math inline">\(0.0000\)</span></td>
 </tr>
 </tbody>

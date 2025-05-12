@@ -526,10 +526,10 @@ Las pruebas a realizar corresponden a la validación si los resultados obtenidos
 summary(regresion)
 ```
 
-| parámetro            | $Ho$               | $Ha$                   |  $EdeP$            | valor-p              |
+| parámetro            | $Ho$               | $Ha$                   |  $EdeP: T$            | valor-p              |
 |:---------------------|:-------------------|:-----------------------|:-------------------|:---------------------|	
-|intercepto $\beta_{0}$|$Ho: \beta_{0} = 0$ | $Ha: \beta_{0} \neq 0$ | $EdeP:$ $t=1,123$  | $valor-p:$ $0.288$   |
-|pendiente  $\beta_{1}$|$Ho: \beta_{1} = 0$ | $Ha: \beta_{1} \neq 0$ | $EdeP :$ $t=7.376$ | $valor-p:$ $0.00005$ |
+|intercepto $\beta_{0}$|$\beta_{0} = 0$ | $\beta_{0} \neq 0$ | $1,123$  | $0.288$   |
+|pendiente  $\beta_{1}$|$\beta_{1} = 0$ | $\beta_{1} \neq 0$ | $7.376$ | $0.00005$ |
 
 
 <br/><br/>
@@ -693,10 +693,10 @@ summary(regresion)
 
 En el listado para cada estimación se presenta una prueba-t individual sobre la significancia de cada coeficiente asi:
 	
-| parámetro            | $Ho$               | $Ha$                   |  $EdeP$            | `valor-p`   |
+| parámetro            | $Ho$               | $Ha$                   |  $EdeP: T$            | `valor-p`   |
 |:---------------------|:-------------------|:-----------------------|:-------------------|:------------|	
-|intercepto $\beta_{0}$|$\beta_{0} =0$      |$\beta_{0}\neq 0$       |$ T = 0.158$        | $0.876$     |
-|pendiente $\beta_{1}$ |$\beta_{1} =0$      |$\beta_{1} \neq 0$      |$ T = 10.945$       | $0.0000$    |
+|intercepto $\beta_{0}$|$\beta_{0} =0$      |$\beta_{0}\neq 0$       |$0.158$        | $0.876$     |
+|pendiente $\beta_{1}$ |$\beta_{1} =0$      |$\beta_{1} \neq 0$      |$10.945$       | $0.0000$    |
 	
 Indicando que no se rechaza la hipótesis nula y por tanto se asume que $Ho$ es verdad , $\beta_{0}=0$. En este caso se recomienda que aunque la prueba de hipótesis indique que el intercepto es no significativo, se debe dejar en el modelo, pues el no incluirlo puede generar que la o las pendientes estimadas presenten un sesgo.
 
